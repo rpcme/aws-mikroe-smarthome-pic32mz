@@ -4,7 +4,7 @@
     <configuration>
         <Harmony xmlns="Harmony" MHC="true"/>
         <data xmlns="http://www.netbeans.org/ns/make-project/1">
-            <name>aws_demos</name>
+            <name>smarthome_kit</name>
             <creation-uuid>e54023e9-3948-44ef-bf6f-29d8b223e555</creation-uuid>
             <make-project-type>0</make-project-type>
             <c-extensions>c</c-extensions>
@@ -13,24 +13,24 @@
             <asminc-extensions/>
             <sourceEncoding>ISO-8859-1</sourceEncoding>
             <sourceRootList>
-                <sourceRootElem>../../../../lib/third_party/mcu_vendor/microchip</sourceRootElem>
-                <sourceRootElem>../../../../lib/FreeRTOS/portable/MPLAB</sourceRootElem>
-                <sourceRootElem>../../../../lib/secure_sockets</sourceRootElem>
-                <sourceRootElem>../../../common/include</sourceRootElem>
-                <sourceRootElem>../../../../lib/pkcs11/portable/microchip/curiosity_pic32mzef</sourceRootElem>
-                <sourceRootElem>../../../../lib/wifi/portable/microchip/curiosity_pic32mzef</sourceRootElem>
+                <sourceRootElem>../../../../amazon-freertos/lib/third_party/mcu_vendor/microchip</sourceRootElem>
+                <sourceRootElem>../../../../amazon-freertos/lib/FreeRTOS/portable/MPLAB</sourceRootElem>
+                <sourceRootElem>../../../../amazon-freertos/lib/secure_sockets</sourceRootElem>
+                <sourceRootElem>../../../../amazon-freertos/demos/common/include</sourceRootElem>
+                <sourceRootElem>../../../../amazon-freertos/lib/pkcs11/portable/microchip/curiosity_pic32mzef</sourceRootElem>
+                <sourceRootElem>../../../../amazon-freertos/lib/wifi/portable/microchip/curiosity_pic32mzef</sourceRootElem>
                 <sourceRootElem>../common/application_code</sourceRootElem>
                 <sourceRootElem>../common/config_files</sourceRootElem>
-                <sourceRootElem>../../../../lib/FreeRTOS-Plus-TCP</sourceRootElem>
-                <sourceRootElem>../../../common/demo_runner</sourceRootElem>
-                <sourceRootElem>../../../common/mqtt</sourceRootElem>
-                <sourceRootElem>../../../common/greengrass_connectivity</sourceRootElem>
-                <sourceRootElem>../../../common/logging</sourceRootElem>
-                <sourceRootElem>../../../common/ota</sourceRootElem>
-                <sourceRootElem>../../../../lib/pkcs11/mbedtls</sourceRootElem>
-                <sourceRootElem>../../../common/devmode_key_provisioning</sourceRootElem>
-                <sourceRootElem>../../../common/homeautomation</sourceRootElem>
-                <sourceRootElem>../../../common/home_automation</sourceRootElem>
+                <sourceRootElem>../../../../amazon-freertos/lib/FreeRTOS-Plus-TCP</sourceRootElem>
+                <sourceRootElem>../../../../amazon-freertos/demos/common/demo_runner</sourceRootElem>
+                <sourceRootElem>../../../../amazon-freertos/demos/common/mqtt</sourceRootElem>
+                <sourceRootElem>../../../../amazon-freertos/demos/common/greengrass_connectivity</sourceRootElem>
+                <sourceRootElem>../../../../amazon-freertos/demos/common/logging</sourceRootElem>
+                <sourceRootElem>../../../../amazon-freertos/demos/common/ota</sourceRootElem>
+                <sourceRootElem>../../../../amazon-freertos/lib/pkcs11/mbedtls</sourceRootElem>
+                <sourceRootElem>../../../../amazon-freertos/demos/common/devmode_key_provisioning</sourceRootElem>
+                <sourceRootElem>../../../../amazon-freertos/demos/common/homeautomation</sourceRootElem>
+                <sourceRootElem>../../../../amazon-freertos/demos/common/home_automation</sourceRootElem>
                 <sourceRootElem>../../../mikroe</sourceRootElem>
             </sourceRootList>
             <confList>
