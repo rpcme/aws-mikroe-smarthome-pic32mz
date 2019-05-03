@@ -109,6 +109,15 @@ static MQTTBool_t prvMQTTCallback ( void * pvUserData,
 
 void vStartRemoteHVACDemo ( void )
 {
+    
+        /* Initialize the Application */
+#if AWS_WORKSHOP_SECTION_3_TELEMETRY == 1
+    HVAC_Initialize();
+    SENSOR_Initialize();
+    THERMOSTAT_Initialize();
+    DISPLAY_Initialize();
+#endif
+
     configPRINTF( ( "Creating Connector Task...\r\n" ) );
     
     connectionData.state = MODULE_STATE_INIT;

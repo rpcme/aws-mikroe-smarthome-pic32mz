@@ -22,6 +22,7 @@
 
 #include <stdio.h>
 
+#include "../aws_home_automation_demo.h"
 #include "../remote_hvac/module_display.h"
 #include "../../mikroe/OLED_C/click_oled_c.h"
 
@@ -36,7 +37,7 @@
 //                                                                  ---------
 
 /**
-    \biref Logger Data
+    \brief Logger Data
 
 This structure holds the Logger's data.
 
@@ -254,7 +255,7 @@ static void display_update ( void )
     {
         oledc_task( );
         xSemaphoreGive( smphrSPI2 );
-    }    
+    }
 }
 
 static void display_intro ( void )

@@ -46,6 +46,7 @@
 
 /* Application version info. */
 #include "aws_application_version.h"
+#include "../../../../home_automation/aws_home_automation_demo.h"
 
 /* Declare the firmware version structure for all to see. */
 const AppVersion32_t xAppFirmwareVersion =
@@ -134,11 +135,13 @@ int main( void )
      * running.  */
     prvMiscInitialization();
 
+#if AWS_WORKSHOP_SECTION_2_CONN == 1
     FreeRTOS_IPInit( ucIPAddress,
                      ucNetMask,
                      ucGatewayAddress,
                      ucDNSServerAddress,
                      ucMACAddress );
+#endif
 
     /* Start the scheduler.  Initialization that requires the OS to be running,
      * including the WiFi initialization, is performed in the RTOS daemon task
@@ -155,7 +158,7 @@ static void prvMiscInitialization( void )
     xLoggingTaskInitialize( mainLOGGING_TASK_STACK_SIZE,
                             tskIDLE_PRIORITY,
                             mainLOGGING_MESSAGE_QUEUE_LENGTH );
-
+    MODULES_Initialize();
     SYS_Initialize( NULL );
     SYS_Tasks();
 }

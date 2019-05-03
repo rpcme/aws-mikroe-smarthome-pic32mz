@@ -45,6 +45,7 @@ SOFTWARE
 // *****************************************************************************
 
 #include "../../../../../home_automation/module_common.h"
+#include "../../../../../home_automation/aws_home_automation_demo.h"
 #include "system_config.h"
 #include "system_definitions.h"
 
@@ -625,12 +626,6 @@ void SYS_Initialize ( void* data )
     sysObj.tcpip = TCPIP_STACK_Init();
     SYS_ASSERT(sysObj.tcpip != SYS_MODULE_OBJ_INVALID, "TCPIP_STACK_Init Failed" );
 #endif
-    /* Initialize the Application */
-    MODULES_Initialize();
-    HVAC_Initialize();
-    SENSOR_Initialize();
-    THERMOSTAT_Initialize();
-    DISPLAY_Initialize();
 }
 
 

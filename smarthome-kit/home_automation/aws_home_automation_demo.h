@@ -26,6 +26,9 @@
 #ifndef _AWS_CLICKBOARD_H_
 #define _AWS_CLICKBOARD_H_
 
+#define AWS_WORKSHOP_SECTION_2_CONN 1
+#define AWS_WORKSHOP_SECTION_3_TELEMETRY 0
+
 #include "aws_demo.h"
 
 demoDECLARE_DEMO( vStartRemoteHVACDemo );

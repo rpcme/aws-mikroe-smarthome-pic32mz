@@ -119,7 +119,7 @@ Build the components.
 
    ![flip-full](images/flip-full.jpg)
 
-8. Insert the MPLAB SNAP to the ICSD header pins so that PIN 0 has alignment.  Note the small arrows on each board.
+8. Insert the MPLAB SNAP to the ICSP header pins so that PIN 0 has alignment.  Note the small arrows on each board.
 
    ![flip-debug-alignment](images/flip-debug-alignment.jpg)
 
