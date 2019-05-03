@@ -11,7 +11,7 @@
 
 #include "module_thermostat.h"
 #include "module_hvac.h"
-#include "../../../mikroe/Rotary/click_rotary.h"
+#include "../../mikroe/Rotary/click_rotary.h"
 
 /* ------------------------------------------------------------------- MACROS */
 //                                                                     ------

@@ -27,7 +27,7 @@
 
 /* Demo includes. */
 #include "aws_demo_config.h"
-#include "aws_home_automation_demo.h"
+#include "../aws_home_automation_demo.h"
 
 #include "../module_common.h"
 #include "module_sensor.h"

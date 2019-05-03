@@ -23,7 +23,7 @@
 #include <stdio.h>
 
 #include "../remote_hvac/module_display.h"
-#include "../../../mikroe/OLED_C/click_oled_c.h"
+#include "../../mikroe/OLED_C/click_oled_c.h"
 
 /* ------------------------------------------------------------------- MACROS */
 //                                                                     ------

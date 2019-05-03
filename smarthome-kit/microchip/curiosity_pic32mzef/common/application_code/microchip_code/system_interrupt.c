@@ -61,8 +61,8 @@ SOFTWARE
 #include "system_definitions.h"
 #include "NetworkConfig.h"
 
-#include "../../../../../common/home_automation/remote_hvac/module_thermostat.h"
-#include "../../../../../common/home_automation/remote_hvac/module_display.h"
+#include "../../../../home_automation/remote_hvac/module_thermostat.h"
+#include "../../../../home_automation/remote_hvac/module_display.h"
 
 // *****************************************************************************
 // *****************************************************************************

@@ -12,26 +12,30 @@
             <header-extensions>h</header-extensions>
             <asminc-extensions/>
             <sourceEncoding>ISO-8859-1</sourceEncoding>
+            <make-dep-projects>
+                <make-dep-project>../../curiosity_pic32_bl/aws_bootloader.X</make-dep-project>
+            </make-dep-projects>
             <sourceRootList>
-                <sourceRootElem>../../../../amazon-freertos/lib/third_party/mcu_vendor/microchip</sourceRootElem>
-                <sourceRootElem>../../../../amazon-freertos/lib/FreeRTOS/portable/MPLAB</sourceRootElem>
-                <sourceRootElem>../../../../amazon-freertos/lib/secure_sockets</sourceRootElem>
+                <sourceRootElem>../../../../lib/third_party/mcu_vendor/microchip</sourceRootElem>
+                <sourceRootElem>../../../../lib/FreeRTOS/portable/MPLAB</sourceRootElem>
+                <sourceRootElem>../../../../lib/secure_sockets</sourceRootElem>
                 <sourceRootElem>../../../../amazon-freertos/demos/common/include</sourceRootElem>
-                <sourceRootElem>../../../../amazon-freertos/lib/pkcs11/portable/microchip/curiosity_pic32mzef</sourceRootElem>
-                <sourceRootElem>../../../../amazon-freertos/lib/wifi/portable/microchip/curiosity_pic32mzef</sourceRootElem>
+                <sourceRootElem>../../../../lib/pkcs11/portable/microchip/curiosity_pic32mzef</sourceRootElem>
+                <sourceRootElem>../../../../lib/wifi/portable/microchip/curiosity_pic32mzef</sourceRootElem>
                 <sourceRootElem>../common/application_code</sourceRootElem>
                 <sourceRootElem>../common/config_files</sourceRootElem>
-                <sourceRootElem>../../../../amazon-freertos/lib/FreeRTOS-Plus-TCP</sourceRootElem>
+                <sourceRootElem>../../../../lib/FreeRTOS-Plus-TCP</sourceRootElem>
                 <sourceRootElem>../../../../amazon-freertos/demos/common/demo_runner</sourceRootElem>
                 <sourceRootElem>../../../../amazon-freertos/demos/common/mqtt</sourceRootElem>
                 <sourceRootElem>../../../../amazon-freertos/demos/common/greengrass_connectivity</sourceRootElem>
                 <sourceRootElem>../../../../amazon-freertos/demos/common/logging</sourceRootElem>
                 <sourceRootElem>../../../../amazon-freertos/demos/common/ota</sourceRootElem>
-                <sourceRootElem>../../../../amazon-freertos/lib/pkcs11/mbedtls</sourceRootElem>
+                <sourceRootElem>../../../../lib/pkcs11/mbedtls</sourceRootElem>
                 <sourceRootElem>../../../../amazon-freertos/demos/common/devmode_key_provisioning</sourceRootElem>
                 <sourceRootElem>../../../../amazon-freertos/demos/common/homeautomation</sourceRootElem>
                 <sourceRootElem>../../../../amazon-freertos/demos/common/home_automation</sourceRootElem>
                 <sourceRootElem>../../../mikroe</sourceRootElem>
+                <sourceRootElem>../../harmony</sourceRootElem>
             </sourceRootList>
             <confList>
                 <confElem>
@@ -42,9 +46,6 @@
             <formatting>
                 <project-formatting-style>false</project-formatting-style>
             </formatting>
-            <make-dep-projects>
-                <make-dep-project>../../curiosity_pic32_bl/aws_bootloader.X</make-dep-project>
-            </make-dep-projects>
         </data>
     </configuration>
 </project>

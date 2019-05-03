@@ -57,57 +57,57 @@
                    displayName="config_files"
                    projectFiles="true">
       <itemPath>../config_files/aws_boot_config.h</itemPath>
-      <itemPath>../../../common/ota/bootloader/utility/user-config/ota-descriptor.config</itemPath>
+      <itemPath>../../../../amazon-freertos/demos/common/ota/bootloader/utility/user-config/ota-descriptor.config</itemPath>
     </logicalFolder>
     <logicalFolder name="f1" displayName="lib" projectFiles="true">
       <logicalFolder name="f1" displayName="bootloader" projectFiles="true">
         <logicalFolder name="f1" displayName="crypto" projectFiles="true">
-          <itemPath>../../../common/ota/bootloader/crypto/tinycrypt/aws_boot_crypto.c</itemPath>
-          <itemPath>../../../common/ota/bootloader/crypto/tinycrypt/asn1utility.c</itemPath>
-          <itemPath>../../../common/ota/bootloader/crypto/tinycrypt/asn1utility.h</itemPath>
+          <itemPath>../../../../amazon-freertos/demos/common/ota/bootloader/crypto/tinycrypt/aws_boot_crypto.c</itemPath>
+          <itemPath>../../../../amazon-freertos/demos/common/ota/bootloader/crypto/tinycrypt/asn1utility.c</itemPath>
+          <itemPath>../../../../amazon-freertos/demos/common/ota/bootloader/crypto/tinycrypt/asn1utility.h</itemPath>
         </logicalFolder>
         <logicalFolder name="f3" displayName="flash" projectFiles="true">
-          <itemPath>../../../common/ota/bootloader/flash/portable/microchip/curiosity_pic32mzef/aws_boot_flash.c</itemPath>
-          <itemPath>../../../common/ota/bootloader/flash/portable/microchip/curiosity_pic32mzef/aws_boot_nvm.c</itemPath>
-          <itemPath>../../../common/ota/bootloader/flash/portable/microchip/curiosity_pic32mzef/aws_boot_nvm.h</itemPath>
-          <itemPath>../../../common/ota/bootloader/flash/portable/microchip/curiosity_pic32mzef/aws_boot_partition.c</itemPath>
+          <itemPath>../../../../amazon-freertos/demos/common/ota/bootloader/flash/portable/microchip/curiosity_pic32mzef/aws_boot_flash.c</itemPath>
+          <itemPath>../../../../amazon-freertos/demos/common/ota/bootloader/flash/portable/microchip/curiosity_pic32mzef/aws_boot_nvm.c</itemPath>
+          <itemPath>../../../../amazon-freertos/demos/common/ota/bootloader/flash/portable/microchip/curiosity_pic32mzef/aws_boot_nvm.h</itemPath>
+          <itemPath>../../../../amazon-freertos/demos/common/ota/bootloader/flash/portable/microchip/curiosity_pic32mzef/aws_boot_partition.c</itemPath>
         </logicalFolder>
         <logicalFolder name="f2" displayName="include" projectFiles="true">
-          <itemPath>../../../common/ota/bootloader/include/aws_boot_crypto.h</itemPath>
-          <itemPath>../../../common/ota/bootloader/include/aws_boot_flash.h</itemPath>
-          <itemPath>../../../common/ota/bootloader/include/aws_boot_loader.h</itemPath>
-          <itemPath>../../../common/ota/bootloader/include/aws_boot_pal.h</itemPath>
-          <itemPath>../../../common/ota/bootloader/include/aws_boot_types.h</itemPath>
-          <itemPath>../../../common/ota/bootloader/include/aws_boot_codesigner_public_key.h</itemPath>
-          <itemPath>../../../common/ota/bootloader/include/aws_boot_log.h</itemPath>
-          <itemPath>../../../common/ota/bootloader/include/aws_boot_partition.h</itemPath>
-          <itemPath>../../../common/ota/bootloader/flash/portable/microchip/curiosity_pic32mzef/aws_boot_flash_info.h</itemPath>
+          <itemPath>../../../../amazon-freertos/demos/common/ota/bootloader/include/aws_boot_crypto.h</itemPath>
+          <itemPath>../../../../amazon-freertos/demos/common/ota/bootloader/include/aws_boot_flash.h</itemPath>
+          <itemPath>../../../../amazon-freertos/demos/common/ota/bootloader/include/aws_boot_loader.h</itemPath>
+          <itemPath>../../../../amazon-freertos/demos/common/ota/bootloader/include/aws_boot_pal.h</itemPath>
+          <itemPath>../../../../amazon-freertos/demos/common/ota/bootloader/include/aws_boot_types.h</itemPath>
+          <itemPath>../../../../amazon-freertos/demos/common/ota/bootloader/include/aws_boot_codesigner_public_key.h</itemPath>
+          <itemPath>../../../../amazon-freertos/demos/common/ota/bootloader/include/aws_boot_log.h</itemPath>
+          <itemPath>../../../../amazon-freertos/demos/common/ota/bootloader/include/aws_boot_partition.h</itemPath>
+          <itemPath>../../../../amazon-freertos/demos/common/ota/bootloader/flash/portable/microchip/curiosity_pic32mzef/aws_boot_flash_info.h</itemPath>
         </logicalFolder>
         <logicalFolder name="f4" displayName="loader" projectFiles="true">
-          <itemPath>../../../common/ota/bootloader/loader/aws_boot_loader.c</itemPath>
-          <itemPath>../../../common/ota/bootloader/loader/portable/microchip/curiosity_pic32mzef/aws_boot_pal.c</itemPath>
+          <itemPath>../../../../amazon-freertos/demos/common/ota/bootloader/loader/aws_boot_loader.c</itemPath>
+          <itemPath>../../../../amazon-freertos/demos/common/ota/bootloader/loader/portable/microchip/curiosity_pic32mzef/aws_boot_pal.c</itemPath>
         </logicalFolder>
         <logicalFolder name="f5" displayName="logging" projectFiles="true">
-          <itemPath>../../../common/ota/bootloader/logging/portable/microchip/curiosity_pic32mzef/aws_boot_log_uart.c</itemPath>
-          <itemPath>../../../common/ota/bootloader/logging/aws_boot_log.c</itemPath>
+          <itemPath>../../../../amazon-freertos/demos/common/ota/bootloader/logging/portable/microchip/curiosity_pic32mzef/aws_boot_log_uart.c</itemPath>
+          <itemPath>../../../../amazon-freertos/demos/common/ota/bootloader/logging/aws_boot_log.c</itemPath>
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="f2" displayName="third_party" projectFiles="true">
         <logicalFolder name="f3" displayName="mbedasn1" projectFiles="true">
-          <itemPath>../../../../lib/third_party/tinycrypt/asn1/asn1.h</itemPath>
-          <itemPath>../../../../lib/third_party/tinycrypt/asn1/asn1parse.c</itemPath>
+          <itemPath>../../../../amazon-freertos/lib/third_party/tinycrypt/asn1/asn1.h</itemPath>
+          <itemPath>../../../../amazon-freertos/lib/third_party/tinycrypt/asn1/asn1parse.c</itemPath>
         </logicalFolder>
         <logicalFolder name="f2" displayName="microchip" projectFiles="true">
           <logicalFolder name="f1" displayName="driver" projectFiles="true">
             <logicalFolder name="f1" displayName="usart" projectFiles="true">
-              <itemPath>../../../../lib/third_party/mcu_vendor/microchip/harmony/v2.05/framework/driver/usart/src/dynamic/drv_usart.c</itemPath>
-              <itemPath>../../../../lib/third_party/mcu_vendor/microchip/harmony/v2.05/framework/driver/usart/src/dynamic/drv_usart_buffer_queue.c</itemPath>
-              <itemPath>../../../../lib/third_party/mcu_vendor/microchip/harmony/v2.05/framework/driver/usart/src/dynamic/drv_usart_read_write.c</itemPath>
+              <itemPath>../../harmony/v2.05/framework/driver/usart/src/dynamic/drv_usart.c</itemPath>
+              <itemPath>../../harmony/v2.05/framework/driver/usart/src/dynamic/drv_usart_buffer_queue.c</itemPath>
+              <itemPath>../../harmony/v2.05/framework/driver/usart/src/dynamic/drv_usart_read_write.c</itemPath>
             </logicalFolder>
           </logicalFolder>
           <logicalFolder name="f2" displayName="system" projectFiles="true">
             <logicalFolder name="f1" displayName="int" projectFiles="true">
-              <itemPath>../../../../lib/third_party/mcu_vendor/microchip/harmony/v2.05/framework/system/int/src/sys_int_pic32.c</itemPath>
+              <itemPath>../../harmony/v2.05/framework/system/int/src/sys_int_pic32.c</itemPath>
             </logicalFolder>
           </logicalFolder>
         </logicalFolder>
@@ -115,39 +115,39 @@
           <logicalFolder name="lib" displayName="lib" projectFiles="true">
             <logicalFolder name="include" displayName="include" projectFiles="true">
               <logicalFolder name="tinycrypt" displayName="tinycrypt" projectFiles="true">
-                <itemPath>../../../../lib/third_party/tinycrypt/lib/include/tinycrypt/aes.h</itemPath>
-                <itemPath>../../../../lib/third_party/tinycrypt/lib/include/tinycrypt/cbc_mode.h</itemPath>
-                <itemPath>../../../../lib/third_party/tinycrypt/lib/include/tinycrypt/ccm_mode.h</itemPath>
-                <itemPath>../../../../lib/third_party/tinycrypt/lib/include/tinycrypt/cmac_mode.h</itemPath>
-                <itemPath>../../../../lib/third_party/tinycrypt/lib/include/tinycrypt/constants.h</itemPath>
-                <itemPath>../../../../lib/third_party/tinycrypt/lib/include/tinycrypt/ctr_mode.h</itemPath>
-                <itemPath>../../../../lib/third_party/tinycrypt/lib/include/tinycrypt/ctr_prng.h</itemPath>
-                <itemPath>../../../../lib/third_party/tinycrypt/lib/include/tinycrypt/ecc.h</itemPath>
-                <itemPath>../../../../lib/third_party/tinycrypt/lib/include/tinycrypt/ecc_dh.h</itemPath>
-                <itemPath>../../../../lib/third_party/tinycrypt/lib/include/tinycrypt/ecc_dsa.h</itemPath>
-                <itemPath>../../../../lib/third_party/tinycrypt/lib/include/tinycrypt/ecc_platform_specific.h</itemPath>
-                <itemPath>../../../../lib/third_party/tinycrypt/lib/include/tinycrypt/hmac.h</itemPath>
-                <itemPath>../../../../lib/third_party/tinycrypt/lib/include/tinycrypt/hmac_prng.h</itemPath>
-                <itemPath>../../../../lib/third_party/tinycrypt/lib/include/tinycrypt/sha256.h</itemPath>
-                <itemPath>../../../../lib/third_party/tinycrypt/lib/include/tinycrypt/utils.h</itemPath>
+                <itemPath>../../../../amazon-freertos/lib/third_party/tinycrypt/lib/include/tinycrypt/aes.h</itemPath>
+                <itemPath>../../../../amazon-freertos/lib/third_party/tinycrypt/lib/include/tinycrypt/cbc_mode.h</itemPath>
+                <itemPath>../../../../amazon-freertos/lib/third_party/tinycrypt/lib/include/tinycrypt/ccm_mode.h</itemPath>
+                <itemPath>../../../../amazon-freertos/lib/third_party/tinycrypt/lib/include/tinycrypt/cmac_mode.h</itemPath>
+                <itemPath>../../../../amazon-freertos/lib/third_party/tinycrypt/lib/include/tinycrypt/constants.h</itemPath>
+                <itemPath>../../../../amazon-freertos/lib/third_party/tinycrypt/lib/include/tinycrypt/ctr_mode.h</itemPath>
+                <itemPath>../../../../amazon-freertos/lib/third_party/tinycrypt/lib/include/tinycrypt/ctr_prng.h</itemPath>
+                <itemPath>../../../../amazon-freertos/lib/third_party/tinycrypt/lib/include/tinycrypt/ecc.h</itemPath>
+                <itemPath>../../../../amazon-freertos/lib/third_party/tinycrypt/lib/include/tinycrypt/ecc_dh.h</itemPath>
+                <itemPath>../../../../amazon-freertos/lib/third_party/tinycrypt/lib/include/tinycrypt/ecc_dsa.h</itemPath>
+                <itemPath>../../../../amazon-freertos/lib/third_party/tinycrypt/lib/include/tinycrypt/ecc_platform_specific.h</itemPath>
+                <itemPath>../../../../amazon-freertos/lib/third_party/tinycrypt/lib/include/tinycrypt/hmac.h</itemPath>
+                <itemPath>../../../../amazon-freertos/lib/third_party/tinycrypt/lib/include/tinycrypt/hmac_prng.h</itemPath>
+                <itemPath>../../../../amazon-freertos/lib/third_party/tinycrypt/lib/include/tinycrypt/sha256.h</itemPath>
+                <itemPath>../../../../amazon-freertos/lib/third_party/tinycrypt/lib/include/tinycrypt/utils.h</itemPath>
               </logicalFolder>
             </logicalFolder>
             <logicalFolder name="source" displayName="source" projectFiles="true">
-              <itemPath>../../../../lib/third_party/tinycrypt/lib/source/aes_decrypt.c</itemPath>
-              <itemPath>../../../../lib/third_party/tinycrypt/lib/source/aes_encrypt.c</itemPath>
-              <itemPath>../../../../lib/third_party/tinycrypt/lib/source/cbc_mode.c</itemPath>
-              <itemPath>../../../../lib/third_party/tinycrypt/lib/source/ccm_mode.c</itemPath>
-              <itemPath>../../../../lib/third_party/tinycrypt/lib/source/cmac_mode.c</itemPath>
-              <itemPath>../../../../lib/third_party/tinycrypt/lib/source/ctr_mode.c</itemPath>
-              <itemPath>../../../../lib/third_party/tinycrypt/lib/source/ctr_prng.c</itemPath>
-              <itemPath>../../../../lib/third_party/tinycrypt/lib/source/ecc.c</itemPath>
-              <itemPath>../../../../lib/third_party/tinycrypt/lib/source/ecc_dh.c</itemPath>
-              <itemPath>../../../../lib/third_party/tinycrypt/lib/source/ecc_dsa.c</itemPath>
-              <itemPath>../../../../lib/third_party/tinycrypt/lib/source/ecc_platform_specific.c</itemPath>
-              <itemPath>../../../../lib/third_party/tinycrypt/lib/source/hmac.c</itemPath>
-              <itemPath>../../../../lib/third_party/tinycrypt/lib/source/hmac_prng.c</itemPath>
-              <itemPath>../../../../lib/third_party/tinycrypt/lib/source/sha256.c</itemPath>
-              <itemPath>../../../../lib/third_party/tinycrypt/lib/source/utils.c</itemPath>
+              <itemPath>../../../../amazon-freertos/lib/third_party/tinycrypt/lib/source/aes_decrypt.c</itemPath>
+              <itemPath>../../../../amazon-freertos/lib/third_party/tinycrypt/lib/source/aes_encrypt.c</itemPath>
+              <itemPath>../../../../amazon-freertos/lib/third_party/tinycrypt/lib/source/cbc_mode.c</itemPath>
+              <itemPath>../../../../amazon-freertos/lib/third_party/tinycrypt/lib/source/ccm_mode.c</itemPath>
+              <itemPath>../../../../amazon-freertos/lib/third_party/tinycrypt/lib/source/cmac_mode.c</itemPath>
+              <itemPath>../../../../amazon-freertos/lib/third_party/tinycrypt/lib/source/ctr_mode.c</itemPath>
+              <itemPath>../../../../amazon-freertos/lib/third_party/tinycrypt/lib/source/ctr_prng.c</itemPath>
+              <itemPath>../../../../amazon-freertos/lib/third_party/tinycrypt/lib/source/ecc.c</itemPath>
+              <itemPath>../../../../amazon-freertos/lib/third_party/tinycrypt/lib/source/ecc_dh.c</itemPath>
+              <itemPath>../../../../amazon-freertos/lib/third_party/tinycrypt/lib/source/ecc_dsa.c</itemPath>
+              <itemPath>../../../../amazon-freertos/lib/third_party/tinycrypt/lib/source/ecc_platform_specific.c</itemPath>
+              <itemPath>../../../../amazon-freertos/lib/third_party/tinycrypt/lib/source/hmac.c</itemPath>
+              <itemPath>../../../../amazon-freertos/lib/third_party/tinycrypt/lib/source/hmac_prng.c</itemPath>
+              <itemPath>../../../../amazon-freertos/lib/third_party/tinycrypt/lib/source/sha256.c</itemPath>
+              <itemPath>../../../../amazon-freertos/lib/third_party/tinycrypt/lib/source/utils.c</itemPath>
             </logicalFolder>
           </logicalFolder>
         </logicalFolder>
@@ -166,23 +166,23 @@
   </logicalFolder>
   <sourceRootList>
     <Elem>../common/microchip_code</Elem>
-    <Elem>../../../../lib/third_party/mcu_vendor/microchip/harmony/v2.05/framework/driver/tmr/src/dynamic</Elem>
-    <Elem>../../../../lib/third_party/mcu_vendor/microchip/harmony/v2.05/framework/driver/usart/src/dynamic</Elem>
-    <Elem>../../../../lib/third_party/mcu_vendor/microchip/harmony/v2.05/framework/system/tmr/src</Elem>
-    <Elem>../../../../lib/third_party/mcu_vendor/microchip/harmony/v2.05/framework/system/int/src</Elem>
+    <Elem>../../harmony/v2.05/framework/driver/tmr/src/dynamic</Elem>
+    <Elem>../../harmony/v2.05/framework/driver/usart/src/dynamic</Elem>
+    <Elem>../../harmony/v2.05/framework/system/tmr/src</Elem>
+    <Elem>../../harmony/v2.05/framework/system/int/src</Elem>
     <Elem>../config_files</Elem>
     <Elem>../common</Elem>
-    <Elem>../../../common/ota/bootloader/crypto/tinycrypt</Elem>
-    <Elem>../../../common/ota/bootloader/include</Elem>
-    <Elem>../../../common/ota/bootloader/flash/portable/microchip/curiosity_pic32mzef</Elem>
-    <Elem>../../../common/ota/bootloader/loader</Elem>
-    <Elem>../../../common/ota/bootloader/logging</Elem>
-    <Elem>../../../../lib/third_party/tinycrypt/lib</Elem>
-    <Elem>../../../../lib/third_party/tinycrypt/asn1</Elem>
-    <Elem>../../../common/ota/bootloader/crypto/asn1utility</Elem>
-    <Elem>../../../../lib/third_party/mbedtls/library</Elem>
-    <Elem>../../../../lib/third_party/mbedtls/include/mbedtls</Elem>
-    <Elem>../../../common/ota/bootloader/utility/user-config</Elem>
+    <Elem>../../../../amazon-freertos/demos/common/ota/bootloader/crypto/tinycrypt</Elem>
+    <Elem>../../../../amazon-freertos/demos/common/ota/bootloader/include</Elem>
+    <Elem>../../../../amazon-freertos/demos/common/ota/bootloader/flash/portable/microchip/curiosity_pic32mzef</Elem>
+    <Elem>../../../../amazon-freertos/demos/common/ota/bootloader/loader</Elem>
+    <Elem>../../../../amazon-freertos/demos/common/ota/bootloader/logging</Elem>
+    <Elem>../../../../amazon-freertos/lib/third_party/tinycrypt/lib</Elem>
+    <Elem>../../../../amazon-freertos/lib/third_party/tinycrypt/asn1</Elem>
+    <Elem>../../../../amazon-freertos/demos/common/ota/bootloader/crypto/asn1utility</Elem>
+    <Elem>../../../../amazon-freertos/lib/third_party/mbedtls/library</Elem>
+    <Elem>../../../../amazon-freertos/lib/third_party/mbedtls/include/mbedtls</Elem>
+    <Elem>../../../../amazon-freertos/demos/common/ota/bootloader/utility/user-config</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
@@ -203,7 +203,7 @@
       <compileType>
         <linkerTool>
           <linkerLibItems>
-            <linkerLibFileItem>../../../../lib/third_party/mcu_vendor/microchip/harmony/v2.05/bin/framework/peripheral/PIC32MZ2048EFM100_peripherals.a</linkerLibFileItem>
+            <linkerLibFileItem>../../harmony/v2.05/bin/framework/peripheral/PIC32MZ2048EFM100_peripherals.a</linkerLibFileItem>
           </linkerLibItems>
         </linkerTool>
         <archiverTool>
@@ -218,7 +218,7 @@
       </compileType>
       <makeCustomizationType>
         <makeCustomizationPreStepEnabled>true</makeCustomizationPreStepEnabled>
-        <makeCustomizationPreStep>python ../../../common/ota/bootloader/utility/codesigner_cert_utility/codesigner_cert_utility.py ../../../common/ota/bootloader/utility/codesigner_cert_utility/aws_ota_codesigner_certificate.pem ../../../common/ota/bootloader/include/aws_boot_codesigner_public_key.h</makeCustomizationPreStep>
+        <makeCustomizationPreStep>python ../../../../amazon-freertos/demos/common/ota/bootloader/utility/codesigner_cert_utility/codesigner_cert_utility.py ../../../../amazon-freertos/demos/common/ota/bootloader/utility/codesigner_cert_utility/aws_ota_codesigner_certificate.pem ../../../../amazon-freertos/demos/common/ota/bootloader/include/aws_boot_codesigner_public_key.h</makeCustomizationPreStep>
         <makeCustomizationPostStepEnabled>false</makeCustomizationPostStepEnabled>
         <makeCustomizationPostStep></makeCustomizationPostStep>
         <makeCustomizationPutChecksumInUserID>false</makeCustomizationPutChecksumInUserID>
@@ -234,7 +234,7 @@
         <property key="enable-unroll-loops" value="false"/>
         <property key="exclude-floating-point" value="false"/>
         <property key="extra-include-directories"
-                  value="..\common\microchip_code;..\common\microchip_code\bsp;..\common\microchip_code\framework;..\..\..\..\lib\third_party\mcu_vendor\microchip\harmony\v2.05\framework;..\..\..\..\lib\third_party\mcu_vendor\microchip\harmony\v2.05\framework\driver\usart;..\common\include;..\..\..\common\ota\bootloader\include;..\..\..\..\lib\third_party\tinycrypt\lib\include;..\..\..\..\lib\third_party\tinycrypt\asn1;..\..\..\common\ota\bootloader\flash\portable\microchip\curiosity_pic32mzef;..\config_files"/>
+                  value="..\common\microchip_code;..\common\microchip_code\bsp;..\common\microchip_code\framework;..\..\harmony\v2.05\framework;..\..\..\home_automation;..\..\harmony\v2.05\framework\driver\usart;..\common\include;..\..\..\..\amazon-freertos\demos\common\ota\bootloader\include;..\..\..\..\amazon-freertos\lib\third_party\tinycrypt\lib\include;..\..\..\..\amazon-freertos\lib\third_party\tinycrypt\asn1;..\..\..\..\amazon-freertos\demos\common\ota\bootloader\flash\portable\microchip\curiosity_pic32mzef;..\config_files"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>

@@ -44,7 +44,7 @@ SOFTWARE
 // *****************************************************************************
 // *****************************************************************************
 
-#include "../../../../../common/home_automation/module_common.h"
+#include "../../../../../home_automation/module_common.h"
 #include "system_config.h"
 #include "system_definitions.h"
 

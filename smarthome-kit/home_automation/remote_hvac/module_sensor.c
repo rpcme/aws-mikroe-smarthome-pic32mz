@@ -10,7 +10,7 @@
 ----------------------------------------------------------------------------- */
 
 #include "module_sensor.h"
-#include "../../../mikroe/Weather/click_weather.h"
+#include "../../mikroe/Weather/click_weather.h"
 
 /* ---------------------------------------------------------------- VARIABLES */
 //                                                                  ---------

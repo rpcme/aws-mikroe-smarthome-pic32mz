@@ -14,23 +14,23 @@
             <sourceEncoding>ISO-8859-1</sourceEncoding>
             <sourceRootList>
                 <sourceRootElem>../common/microchip_code</sourceRootElem>
-                <sourceRootElem>../../../../lib/third_party/mcu_vendor/microchip/harmony/v2.05/framework/driver/tmr/src/dynamic</sourceRootElem>
-                <sourceRootElem>../../../../lib/third_party/mcu_vendor/microchip/harmony/v2.05/framework/driver/usart/src/dynamic</sourceRootElem>
-                <sourceRootElem>../../../../lib/third_party/mcu_vendor/microchip/harmony/v2.05/framework/system/tmr/src</sourceRootElem>
-                <sourceRootElem>../../../../lib/third_party/mcu_vendor/microchip/harmony/v2.05/framework/system/int/src</sourceRootElem>
+                <sourceRootElem>../../harmony/v2.05/framework/driver/tmr/src/dynamic</sourceRootElem>
+                <sourceRootElem>../../harmony/v2.05/framework/driver/usart/src/dynamic</sourceRootElem>
+                <sourceRootElem>../../harmony/v2.05/framework/system/tmr/src</sourceRootElem>
+                <sourceRootElem>../../harmony/v2.05/framework/system/int/src</sourceRootElem>
                 <sourceRootElem>../config_files</sourceRootElem>
                 <sourceRootElem>../common</sourceRootElem>
-                <sourceRootElem>../../../common/ota/bootloader/crypto/tinycrypt</sourceRootElem>
-                <sourceRootElem>../../../common/ota/bootloader/include</sourceRootElem>
-                <sourceRootElem>../../../common/ota/bootloader/flash/portable/microchip/curiosity_pic32mzef</sourceRootElem>
-                <sourceRootElem>../../../common/ota/bootloader/loader</sourceRootElem>
-                <sourceRootElem>../../../common/ota/bootloader/logging</sourceRootElem>
-                <sourceRootElem>../../../../lib/third_party/tinycrypt/lib</sourceRootElem>
-                <sourceRootElem>../../../../lib/third_party/tinycrypt/asn1</sourceRootElem>
-                <sourceRootElem>../../../common/ota/bootloader/crypto/asn1utility</sourceRootElem>
-                <sourceRootElem>../../../../lib/third_party/mbedtls/library</sourceRootElem>
-                <sourceRootElem>../../../../lib/third_party/mbedtls/include/mbedtls</sourceRootElem>
-                <sourceRootElem>../../../common/ota/bootloader/utility/user-config</sourceRootElem>
+                <sourceRootElem>../../../../amazon-freertos/demos/common/ota/bootloader/crypto/tinycrypt</sourceRootElem>
+                <sourceRootElem>../../../../amazon-freertos/demos/common/ota/bootloader/include</sourceRootElem>
+                <sourceRootElem>../../../../amazon-freertos/demos/common/ota/bootloader/flash/portable/microchip/curiosity_pic32mzef</sourceRootElem>
+                <sourceRootElem>../../../../amazon-freertos/demos/common/ota/bootloader/loader</sourceRootElem>
+                <sourceRootElem>../../../../amazon-freertos/demos/common/ota/bootloader/logging</sourceRootElem>
+                <sourceRootElem>../../../../amazon-freertos/lib/third_party/tinycrypt/lib</sourceRootElem>
+                <sourceRootElem>../../../../amazon-freertos/lib/third_party/tinycrypt/asn1</sourceRootElem>
+                <sourceRootElem>../../../../amazon-freertos/demos/common/ota/bootloader/crypto/asn1utility</sourceRootElem>
+                <sourceRootElem>../../../../amazon-freertos/lib/third_party/mbedtls/library</sourceRootElem>
+                <sourceRootElem>../../../../amazon-freertos/lib/third_party/mbedtls/include/mbedtls</sourceRootElem>
+                <sourceRootElem>../../../../amazon-freertos/demos/common/ota/bootloader/utility/user-config</sourceRootElem>
             </sourceRootList>
             <confList>
                 <confElem>
