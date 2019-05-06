@@ -182,7 +182,11 @@ void vApplicationIPNetworkEventHook( eIPCallbackEvent_t eNetworkEvent )
             vDevModeKeyProvisioning();
 
             /* Run all demos. */
+#if AWS_WORKSHOP_SECTION_2_CONN_1 == 1 && AWS_WORKSHOP_SECTION_2_CONN_2 == 0
             DEMO_RUNNER_RunDemos();
+#else
+            vStartRemoteHVACDemo();
+#endif
             xTasksAlreadyCreated = pdTRUE;
         }
 
