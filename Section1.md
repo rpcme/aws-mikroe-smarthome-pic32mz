@@ -127,7 +127,7 @@ The result should look similar to the following.  The orange boxes outline where
 
 ![flip-result](images/flip-result.jpg)
 
-
+Connect the two USB cables between the board and your workstation.
 
 ### Serial Port Installation and Connection: Windows
 
@@ -222,7 +222,7 @@ This step will ask for the following pieces of information:
 
 1. Type or copy-paste your AWS Access Key ID acquired above and press ```Enter```.
 2. Type or copy-paste AWS Secret Access Key acquired above and press ```Enter```.
-3. Default region name - use ```us-west-2``` (or 
+3. Default region name - use ```us-west-2``` (or other region having AWS IoT Core)
 4. Default output format - use ```json```
 
 Note that the first two will be stored unencrypted in the file ```~/.aws/credentials```, the rest will be stored in ```~/.aws/config```. For your security, delete the credentials file at the end of the workshop.

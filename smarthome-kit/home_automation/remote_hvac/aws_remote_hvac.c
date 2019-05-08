@@ -38,15 +38,21 @@
 
 //  MQTT client ID. Note that it must be unique per MQTT broker.
 
-#define mqttCLIENT_ID           ((const uint8_t *)"RemoteHVAC")
+#define mqttCLIENT_ID           clientcredentialIOT_THING_NAME
 
 //  The topic that the MQTT client publishes to.
 
-#define mqttSTATUS_TOPIC_NAME   ((const uint8_t *)"clickdemo/remotehvac/status")
+#define mqttSTATUS_TOPIC_NAME   "thermostats/" mqttCLIENT_ID "/status"
 
 //  The topic that the MQTT client subscribes to.
 
-#define mqttCONFIG_TOPIC_NAME   ((const uint8_t *)"clickdemo/remotehvac/config")
+#define mqttCONFIG_TOPIC_NAME   "thermostats/" mqttCLIENT_ID "/config"
+#define mqttSHADOW_GET          "$aws/things/" mqttCLIENT_ID "/shadow/get"
+#define mqttSHADOW_UPDATE       "$aws/things/" mqttCLIENT_ID "/shadow/update"
+#define mqttSHADOW_UPDATE_ACPT  "$aws/things/" mqttCLIENT_ID "/shadow/update/accepted"
+#define mqttSHADOW_UPDATE_REJT  "$aws/things/" mqttCLIENT_ID "/shadow/update/rejected"
+#define mqttSHADOW_UPDATE_DELTA "$aws/things/" mqttCLIENT_ID "/shadow/update/delta"
+
 
 // ---------------------------------------------------------------------- TYPES
 
@@ -82,7 +88,7 @@ static MQTTAgentSubscribeParams_t xSubscribeParams;
 
 static MQTTAgentPublishParams_t xPublishParameters;
 
-//  Common error code used to pring message via logger.
+//  Common error code used to print message via logger.
 
 static MQTTAgentReturnCode_t    xErrorCode;
 
@@ -110,12 +116,16 @@ static MQTTBool_t prvMQTTCallback ( void * pvUserData,
 void vStartRemoteHVACDemo ( void )
 {
     
-        /* Initialize the Application */
-#if AWS_WORKSHOP_SECTION_3_TELEMETRY == 1
-    HVAC_Initialize();
-    SENSOR_Initialize();
-    THERMOSTAT_Initialize();
+    /* Initialize the Application */
+#if AWS_WORKSHOP_SECTION_2_CONN_2 == 1
     DISPLAY_Initialize();
+#endif
+#if AWS_WORKSHOP_SECTION_3_TELEMETRY == 1
+    SENSOR_Initialize();
+    HVAC_Initialize();
+#endif
+#if AWS_WORKSHOP_SECTION_4_SHADOW == 1
+    THERMOSTAT_Initialize();
 #endif
 
     configPRINTF( ( "Creating Connector Task...\r\n" ) );
@@ -366,7 +376,7 @@ static MODULE_RETURN disconnect_from_broker ( void )
 {
     MODULE_RETURN xReturn = MODULE_ERROR;
     
-    configPRINTF( ( "Sttempting to disconnect from %s.\r\n", 
+    configPRINTF( ( "Attempting to disconnect from %s.\r\n", 
             clientcredentialMQTT_BROKER_ENDPOINT ) );
     
     xErrorCode = MQTT_AGENT_Disconnect( xMQTTHandle, democonfigMQTT_TIMEOUT );
@@ -387,6 +397,9 @@ static MODULE_RETURN disconnect_from_broker ( void )
     return xReturn;
 }
 
+/* Subscribe to a topic with a named callback.  At the time of writing we are 
+   using this method to subscribe to shadow topics
+ */
 static MODULE_RETURN subscribe_to_topic ( void )
 {
     MODULE_RETURN xReturn = MODULE_ERROR;
@@ -473,7 +486,7 @@ static MQTTBool_t prvMQTTCallback ( void * pvUserData,
             that two references are searched through the received string.
         */
 
-        // Target temerature reference search.
+        // Target temperature reference search.
 
         if ( ( tmp = strstr( plBuffer, jsonTARGET_T_REFERENCE ) ) != NULL )
         {
@@ -536,7 +549,7 @@ static MQTTBool_t prvMQTTCallback ( void * pvUserData,
     }
     else
     {
-        configPRINTF( ( "Droped message.\r\n" ) );
+        configPRINTF( ( "Dropped message.\r\n" ) );
     }
     
     return eMQTTFalse;
