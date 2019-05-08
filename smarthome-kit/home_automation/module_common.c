@@ -26,6 +26,7 @@
 #include "remote_hvac/module_sensor.h"
 #include "remote_hvac/module_thermostat.h"
 #include "remote_hvac/module_display.h"
+#include "../home_automation/aws_home_automation_demo.h"
 
 /* ---------------------------------------------------------------- VARIABLES */
 //                                                                  ---------
@@ -38,9 +39,10 @@ QueueHandle_t        qHVAC_Sensor;              // SENSOR           -> HVAC
 QueueHandle_t        qHVAC_TargetT;             // THERMOSTAT/CONN  -> HVAC
     
 QueueHandle_t        qCONN_Fan;                 // HVAC             -> CONN
-QueueHandle_t        qCONN_Aircon;              // HVAC             -> CONN
-QueueHandle_t        qCONN_Sensor;              // HVAC             -> CONN
-QueueHandle_t        qCONN_TargetT;             // HVAC             -> CONN
+QueueHandle_t        qCONN_Aircon;              // HVAC             -> CONN (desired)
+QueueHandle_t        qCONN_Sensor;              // HVAC             -> CONN (desired)
+QueueHandle_t        qCONN_TargetT;             // HVAC             -> CONN (desired)
+QueueHandle_t        qCONN_ShadowReported;      // HVAC             -> CONN (reported)
 
 QueueHandle_t        qDISPLAY_Fan;              // HVAC             -> DISPLAY
 QueueHandle_t        qDISPLAY_Aircon;           // HVAC             -> DISPLAY
@@ -64,6 +66,7 @@ void MODULES_Initialize ( void )
     qCONN_Aircon        = xQueueCreate( 4, sizeof( AIRCON_STATE ) );
     qCONN_Sensor        = xQueueCreate( 4, sizeof( SENSOR_VALUE ) );
     qCONN_TargetT       = xQueueCreate( 4, sizeof( float ) );
+    qCONN_ShadowReported= xQueueCreate( 4, sizeof( xShadowProperties ) );
 
     qDISPLAY_Fan        = xQueueCreate( 4, sizeof( FAN_STATE ) );
     qDISPLAY_Aircon     = xQueueCreate( 4, sizeof( AIRCON_STATE ) );

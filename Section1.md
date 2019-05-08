@@ -223,6 +223,19 @@ This step will ask for the following pieces of information:
 1. Type or copy-paste your AWS Access Key ID acquired above and press ```Enter```.
 2. Type or copy-paste AWS Secret Access Key acquired above and press ```Enter```.
 3. Default region name - use ```us-west-2``` (or other region having AWS IoT Core)
+   
+   Popular regions include:
+   
+   |Region ID|Friendly Name|
+   |------+-------------+
+   |us-east-1|Ohio|
+   |us-east-2|Virginia|
+   |us-west-2|Oregon|
+   |eu-west-1|Dublin|
+   |eu-central-1|Frankfurt|
+   |ap-northeast-1|Tokyo|
+
+	Remember this Region ID for configuration in later sessions.
 4. Default output format - use ```json```
 
 Note that the first two will be stored unencrypted in the file ```~/.aws/credentials```, the rest will be stored in ```~/.aws/config```. For your security, delete the credentials file at the end of the workshop.

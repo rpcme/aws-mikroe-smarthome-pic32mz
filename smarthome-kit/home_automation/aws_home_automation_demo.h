@@ -30,7 +30,7 @@
 
 #if AWS_WORKSHOP == 1
 #define AWS_WORKSHOP_SECTION_2_CONN_1    1
-#define AWS_WORKSHOP_SECTION_2_CONN_2    0
+#define AWS_WORKSHOP_SECTION_2_CONN_2    1
 #define AWS_WORKSHOP_SECTION_3_TELEMETRY 0
 #define AWS_WORKSHOP_SECTION_4_SHADOW    0
 #define AWS_WORKSHOP_SECTION_5_OTA       0
@@ -45,5 +45,17 @@
 #include "aws_demo.h"
 
 demoDECLARE_DEMO( vStartRemoteHVACDemo );
+
+#include "FreeRTOS.h"
+#include "remote_hvac/module_hvac.h"
+
+typedef struct Shadow_Properties
+{
+    uint8_t           req;  // Used for request type
+    float             target_temp;
+    FAN_STATE         fan;
+    AIRCON_STATE      aircon;
+} xShadowProperties;
+
 
 #endif

@@ -74,10 +74,13 @@
 #define jsonTARGET_T_REFERENCE      ("TARGET_T")
     
 #define mqttSENSOR_PAYLOAD          ("{\"%s\":\"%.1f\", \"%s\":\"%.1f\"}")
-#define mqttFAN_PAYLOAD             ("{\"%s\":\"%s\"}")
-#define mqttAIRCON_PAYLOAD          ("{\"%s\":\"%s\"}")
-#define mqttTARGET_PAYLOAD          ("{\"%s\":\"%.1f\"}")
-    
+#define mqttFAN_REPORTED_PAYLOAD    ("{ \"state\":{\"reported\":{\"%s\":\"%s\"}}}")
+#define mqttFAN_DESIRED_PAYLOAD     ("{ \"state\":{\"desired\":{\"%s\":\"%s\"}}}")
+#define mqttAIRCON_REPORTED_PAYLOAD ("{ \"state\":{\"reported\":{\"%s\":\"%s\"}}}")
+#define mqttAIRCON_DESIRED_PAYLOAD  ("{ \"state\":{\"desired\":{\"%s\":\"%s\"}}}")
+#define mqttTARGET_REPORTED_PAYLOAD ("{ \"state\":{\"reported\":{\"%s\":\"%.1f\"}}}")
+#define mqttTARGET_DESIRED_PAYLOAD  ("{ \"state\":{\"desired\":{\"%s\":\"%.1f\"}}}")
+
 #define logSENSOR_PAYLOAD           ("<\"%s\":\"%.1f\", \"%s\":\"%.1f\">\r\n")
 #define logFAN_PAYLOAD              ("<\"%s\":\"%s\">\r\n")
 #define logAIRCON_PAYLOAD           ("<\"%s\":\"%s\">\r\n")
@@ -123,6 +126,7 @@ extern QueueHandle_t        qCONN_Fan;
 extern QueueHandle_t        qCONN_Aircon;
 extern QueueHandle_t        qCONN_Sensor;
 extern QueueHandle_t        qCONN_TargetT;
+extern QueueHandle_t        qCONN_ShadowReported;
 
 extern QueueHandle_t        qDISPLAY_Fan;
 extern QueueHandle_t        qDISPLAY_Aircon;

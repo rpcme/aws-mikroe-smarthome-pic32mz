@@ -40,44 +40,41 @@ Note: the device may already be powered on
 
 To power on the device, plug one end of the USB cable to the Flip N Click device, and the other end of the cable to your computer. The same connection is used for serial output.
 
-[TODO put image here of connected cable]
-
 To prepare the device for debugging, connect one end of the USB cable to the MPLAB SNAP device and the other end of the cable to your computer.
 
-[TODO put image here of connected cable]
+![USB Cabling](images/usb_cables.jpg)
 
 ### Opening the Project
 
 Start MPLAB X.  The start page should appear.
 
-[TODO put image here of MPLAB X]
+![MPLAB X Start Page](images/mplabx_start.png)
 
 Open the project.  Use ```File > Open Project...``` in MPLAB X.  From within the dialog box that pops up, navigate to the project directory.  Select ```aws-mikroe-smarthome-pic32mz > amazon-freertos > demos > microchip > curiosity_pic32mzef > mplab```.  Click **Open Project**.
 
-[TODO put image here of opened project]
-
+![MPLAB X Start Page](images/mplabx_project_load.png)
 
 ### Build and Debug
 
-Before building the project for Debugging, you must select the debugger.  Right-click the project root and click **Properties**.  Ensure that **Conf: [pic32mz\_ef\_curiosity]** is selected on the left side of the dialog box.  On the right-hand side, under **Hardware tool:**, select the Snap debugger - there will be a serial number similar to the following.
+Before building the project for Debugging, you must select the debugger.  Right-click the project root and click **Properties**.  Ensure that **Conf: [pic32mz\_ef\_curiosity]** is selected on the left side of the dialog box.  On the right-hand side, under **Hardware tool:**, select the Snap debugger - there will be a serial number similar to the following.  NOTE:  If your XC32 compiler is not version 2.10, you will need to change your Bootloader compiler version accordingly.  It will likely be easier to install the XC32 v2.10 compiler.
 
-[TODO put image here]
+![Debugger](images/debugger_selection.jpg)
 
 After selection, click **OK**.
 
 To build the project, click the down arrow next to the hammer icon in the toolbar and click **Build for Debugging (Project smarthome_kit)**. 
 
-[TODO put image here of toolbar]
+![build for debugging](images/build_for_debugging.png)
 
 Farther along to the right on the toolbar, you will find an icon that looks like a breakpoint with a little green arrow.
 
-[TODO put image here of toolbar]
+![debug_project.png](images/debug_project.png)
 
 Ensure that your serial connection is still present (this was done in Section 1).  Click the down arrow next to it and select **Debug Project (smarthome\_kit)**.  The debugging process starts by first clearing the memories on the target and then flashing the memories.
 
 Once connected, you will see output similar to the following.
 
-[TODO put image here of serial output]
+![serial output basic](images/serial_output_basic.png)
 
 Awesome! You connected to the AWS Cloud with the basic demo program.  Now let's use the same principles to not only connect to the cloud but to graphically show the connection on the LCD screen.
 
@@ -142,6 +139,10 @@ Open the file ```aws_remote_hvac.c```.  In this step, we will set a breakpoint a
 12. Press the large green debug arrow (or F5) to continue with the program execution.
 13. Press the button to finish the debugging session (or SHIFT-F5).
 
+After the connection, you may have noticed the green circle being filled:
+
+![LCD_Connected](images/LCD_connected.jpg)
+
 ## Persisting Data to DynamoDB
 
 In this section, a DynamoDB table will be setup to capture AWS IoT Lifecycle Events.  When an event occurs, such as a client connection (from device code), an AWS IoT Rule Engine rule evaluates the event topic and puts the data into the DynamoDB table.
@@ -177,7 +178,32 @@ aws dynamodb create-table                                             \
 
 To record all of the Lifecycle Events, we can create four separate Topic Rules or a single Topic Rule.  In this case, we create a Topic Rule capturing all Lifecycle Events.  There is no need to setup a Rule for each client; the rule will be setup to work for any clientId reporting a Lifecycle Event.
 
-First we'll enable actions from AWS IoT to DynamoDB by adding permissions to our Role Policy. Create the following permissions document named ```iotbc-iot-role-permission-ddb.json```.  **IMPORTANT**: change the Region and Account Number in the ARN.
+First we'll enable actions from AWS IoT to DynamoDB by adding permissions to our Role Policy. First, let's create the policy with the name ```iotbc-iot-role-trust.json```.  You can use vi or your favorite text editor to create the document.
+
+```json
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Principal": {
+        "Service": "iot.amazonaws.com"
+      },
+      "Action": "sts:AssumeRole"
+    }
+  ]
+}
+```
+
+Now create the role.
+
+```bash
+aws iam create-role \
+    --role-name iot-bootcamp \
+    --assume-role-policy-document file://iotbc-iot-role-trust.json
+```
+
+Create the following permissions document named ```iotbc-iot-role-permission-ddb.json```.  **IMPORTANT**: change the Region and Account ID in the ARN.  Your Account ID can be found in the AWS Console in **My Account**.
 
 ```json
 {
@@ -185,7 +211,7 @@ First we'll enable actions from AWS IoT to DynamoDB by adding permissions to our
   "Statement": {
     "Effect": "Allow",
     "Action": "dynamodb:PutItem",
-    "Resource": "arn:aws:dynamodb:us-east-1:012345678910:table/IotLifecycleEvents"
+    "Resource": "arn:aws:dynamodb:[REGION]:[ACCOUNT_ID]:table/IotLifecycleEvents"
   }
 }
 ```
@@ -199,7 +225,7 @@ aws iam put-role-policy \
     --policy-document file://iotbc-iot-role-permission-ddb.json
 ```
 
-Create the =connected= rule.  The rule SQL uses the ```+``` wildcard to capture all events for your Client ID.
+Create the ```connected``` rule.  The rule SQL uses the ```+``` wildcard to capture all events for your Client ID.
 
 Create the Rule JSON file named ```DynamoDBRule.json```.  **IMPORTANT**: change the Region and Account Number in the ARN. Replace the CLIENT_ID with your Client ID.
 
