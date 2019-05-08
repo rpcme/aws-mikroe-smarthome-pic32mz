@@ -135,7 +135,7 @@ int main( void )
      * running.  */
     prvMiscInitialization();
 
-#if AWS_WORKSHOP_SECTION_2_CONN == 1
+#if AWS_WORKSHOP_SECTION_2_CONN_1 == 1
     FreeRTOS_IPInit( ucIPAddress,
                      ucNetMask,
                      ucGatewayAddress,

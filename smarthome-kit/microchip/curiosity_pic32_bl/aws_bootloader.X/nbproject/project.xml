@@ -12,6 +12,7 @@
             <header-extensions>h</header-extensions>
             <asminc-extensions/>
             <sourceEncoding>ISO-8859-1</sourceEncoding>
+            <make-dep-projects/>
             <sourceRootList>
                 <sourceRootElem>../common/microchip_code</sourceRootElem>
                 <sourceRootElem>../../harmony/v2.05/framework/driver/tmr/src/dynamic</sourceRootElem>
@@ -41,7 +42,6 @@
             <formatting>
                 <project-formatting-style>false</project-formatting-style>
             </formatting>
-            <make-dep-projects/>
         </data>
     </configuration>
 </project>
