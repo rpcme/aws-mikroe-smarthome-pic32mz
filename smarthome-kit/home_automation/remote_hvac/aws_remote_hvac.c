@@ -265,7 +265,7 @@ static void connector_task ( void )
                 if ( xQueueReceive( qCONN_Sensor, (SENSOR_VALUE *) &sensorv, 
                             RTOS_NO_BLOCKING ) )
                 {
-                    (void) sprintf( cDataBuffer, mqttSENSOR_PAYLOAD, 
+                    (void) sprintf( cDataBuffer, mqttSENSOR_PAYLOAD, clientcredentialIOT_THING_NAME, xTaskGetTickCount(),
                                     jsonSENSOR_T_REFERENCE, sensorv.temperature, 
                                     jsonSENSOR_H_REFERENCE, sensorv.humidity );
                     

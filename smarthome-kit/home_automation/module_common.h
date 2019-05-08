@@ -73,7 +73,7 @@
 #define jsonSENSOR_H_REFERENCE      ("SENSOR_H")
 #define jsonTARGET_T_REFERENCE      ("TARGET_T")
     
-#define mqttSENSOR_PAYLOAD          ("{\"%s\":\"%.1f\", \"%s\":\"%.1f\"}")
+#define mqttSENSOR_PAYLOAD          ("{\"clientId\":\"%s\",\"timestamp\":%d,\"%s\":\"%.1f\", \"%s\":\"%.1f\"}")
 #define mqttFAN_REPORTED_PAYLOAD    ("{ \"state\":{\"reported\":{\"%s\":\"%s\"}}}")
 #define mqttFAN_DESIRED_PAYLOAD     ("{ \"state\":{\"desired\":{\"%s\":\"%s\"}}}")
 #define mqttAIRCON_REPORTED_PAYLOAD ("{ \"state\":{\"reported\":{\"%s\":\"%s\"}}}")

@@ -65,13 +65,13 @@ As you can see, the HVAC is the heart of the system, and decouples the sensor re
 
 ## Review the Connectivity Task Queue Consumer
 
-When the message is passed on the ```qCONN_Sensor``` queue, there is expectation that there is a queue consumer to pick up the messages and do something useful.  In ```aws_remote_hvac.c```, the ```xQueueReceive``` call to pick up messages from the queue is on **line 241**.
+When the message is passed on the ```qCONN_Sensor``` queue, there is expectation that there is a queue consumer to pick up the messages and do something useful.  In ```aws_remote_hvac.c```, the ```xQueueReceive``` call to pick up messages from the queue is on **line 265**.
 
-When a message is found on the queue, the message is passed along to a user defined function named ```publish_message``` (line 248).
+When a message is found on the queue, the message is passed along to a user defined function named ```publish_message``` (**line 272**).
 
-The user defined function ```publish_message``` (line 430) performs the work for publishing messages to AWS IoT Core.  The code sets up the values for the ```MQTTAgentPublishParams_t``` structure declared as ```xPublishParameters```.  The ```MQTTAgentPublishParams_t``` structure is defined in the MQTT Client code, part of Amazon FreeRTOS.
+The user defined function ```publish_message``` (**line 454**) performs the work for publishing messages to AWS IoT Core.  The code sets up the values for the ```MQTTAgentPublishParams_t``` structure declared as ```xPublishParameters```.  The ```MQTTAgentPublishParams_t``` structure is defined in the MQTT Client code, part of Amazon FreeRTOS.
 
-Once the structure is setup, the function ```MQTT_AGENT_Publish``` (line 452) is made which triggers the MQTTAgent task to consume the message and attempt publishing to AWS IoT Core.
+Once the structure is setup, the function ```MQTT_AGENT_Publish``` (line 478) is made which triggers the MQTTAgent task to consume the message and attempt publishing to AWS IoT Core.
 
 ## Demonstrate the Publish
 
@@ -83,7 +83,7 @@ In this subsection, we will run the code to understand the code flow between tas
    |------+------|   
    | module_sensor.c | line 112 |
    | module_hvac.c | line 374 |
-   | aws\_remote\_hvac.c | line 248 |
+   | aws\_remote\_hvac.c at ```configASSERT( xMQTTHandle != NULL );``` | line 263 |
 
 2. Start debugging by clicking **Debug Project**.
 3. The first breakpoint will be hit at line 112.  The sensor module sends readings at a predefined interval to the queue.  Look at the contents of the structure to see the readings made by the sensor.
@@ -99,6 +99,10 @@ In this subsection, we will run the code to understand the code flow between tas
 7. Ensure the AWS IoT Console test client is setup to listen to the status topic ```thermostats/CLIENT_ID/status```, where CLIENT_ID is replaced with your Client ID.
 8. Press Step Over (F8) and note a message should come through the IoT Console.
 
+The LCD Display displays the temperature and humidity. The larger font displays the reading by the sensor, and the smaller font shows the *desired* temperature which will be described in detail in the Device Shadow section.
+
+![lcd temperature](images/LCD_Temperature.jpg)
+
 Remove all breakpoints and press Continue (F5).
 
 ## Persisting Data to DynamoDB
@@ -113,7 +117,7 @@ We will start by creating AWS objects from the leaf of the runtime dependency ch
 
 ```bash
 aws dynamodb create-table                                             \
-    --table-name             $PREFIX_ThermostatData                   \
+    --table-name             ThermostatData                           \
     --attribute-definitions  AttributeName=clientId,AttributeType=S   \
                              AttributeName=timestamp,AttributeType=N  \
     --key-schema             AttributeName=clientId,KeyType=HASH      \
@@ -125,7 +129,7 @@ aws dynamodb create-table                                             \
 
 To record all of the Lifecycle Events, we can create four separate Topic Rules or a single Topic Rule.  In this case, we create a Topic Rule capturing all Lifecycle Events.  There is no need to setup a Rule for each client; the rule will be setup to work for any clientId reporting a Lifecycle Event.
 
-First we'll enable actions from AWS IoT to DynamoDB by adding permissions to our Role Policy. Create the following permissions document named ```iotbc-iot-role-permission-ddb.json```.  **IMPORTANT**: change the Region and Account Number in the ARN.
+First we'll enable actions from AWS IoT to DynamoDB by adding permissions to our Role Policy. Create the following permissions document named ```iotbc-iot-role-permission-ddb2.json```.  **IMPORTANT**: change the Region and Account Number in the ARN.
 
 ```json
 {
@@ -133,7 +137,7 @@ First we'll enable actions from AWS IoT to DynamoDB by adding permissions to our
   "Statement": {
     "Effect": "Allow",
     "Action": "dynamodb:PutItem",
-    "Resource": "arn:aws:dynamodb:us-east-1:012345678910:table/PREFIX_ThermostatData"
+    "Resource": "arn:aws:dynamodb:us-east-1:012345678910:table/ThermostatData"
   }
 }
 ```
@@ -143,24 +147,24 @@ Now add the permissions policy to the =iot-bootcamp= Role.
 ```bash
 aws iam put-role-policy \
     --role-name iot-bootcamp \
-    --policy-name iot-ddb-IotLifecycleEvents \
-    --policy-document file://iotbc-iot-role-permission-ddb.json
+    --policy-name iot-ddb-ThermostatEvents \
+    --policy-document file://iotbc-iot-role-permission-ddb2.json
 ```
 
 Create the =connected= rule.  The rule SQL uses the =#= wildcard to capture all events.
 
-Create the Rule JSON file named ```DynamoDBRule.json```.  **IMPORTANT**: change the Region and Account Number in the ARN.
+Create the Rule JSON file named ```DynamoDBRule2.json```.  **IMPORTANT**: change the Region, Account Number, and Client ID in the ARN.
 
 ```json
 {
-  "sql": "select * from '$aws/events/#'",
-  "description": "Get lifecycle events and put them to DynamoDB",
+  "sql": "select clientId, timestamp, SENSOR_T, SENSOR_H from 'thermostats/flipnclick-pic32mz/status'",
+  "description": "Get temperature data into DynamoDB",
   "ruleDisabled": false,
   "awsIotSqlVersion": "2016-03-23",
   "actions": [
     {
       "dynamoDB": {
-        "tableName": "IotLifecycleEvents",
+        "tableName": "ThermostatData",
         "roleArn": "arn:aws:iam::012345678910:role/iot-bootcamp",
         "hashKeyField": "clientId",
         "hashKeyValue": "${clientId}",
@@ -178,8 +182,8 @@ Create the rule, naming it *LifecycleEvents* and using the Topic Rule payload th
 
 ```bash
 aws iot create-topic-rule \
-    --rule-name LifecycleEvents \
-    --topic-rule-payload file://DynamoDBRule.json
+    --rule-name ThermostatData \
+    --topic-rule-payload file://DynamoDBRule2.json
 ```
    
 ### Test the Rule
