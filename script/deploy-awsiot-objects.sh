@@ -35,7 +35,7 @@ fi
 
 policy_afr=${thing_afr}-policy
 
-dc_afr=$(dirname $0)/../../edge/auth-${thing_afr}
+dc_afr=$(dirname $0)/../edge/auth-${thing_afr}
 
 if test -d ${dc_afr}; then
   echo The Amazon FreeRTOS certificate and key for this prefix seem to exist already.
