@@ -162,11 +162,11 @@ Let's first look at what the Lifecycle Event data gives us so an effective decis
 
 The interest is reporting which clients are emitting events. In such case, the composite primary key will be clientId (HASH) and timestamp (RANGE).
 
-We will start by creating AWS objects from the leaf of the runtime dependency chain.  Start by creating the DynamoDB Table where the Lifecycle Event data will be persisted.
+We will start by creating AWS objects from the leaf of the runtime dependency chain.  Start by creating the DynamoDB Table where the Lifecycle Event data will be persisted.  **REPLACE PREFIX with your user defined PREFIX!**
 
 ```bash
 aws dynamodb create-table                                             \
-    --table-name             IotLifecycleEvents                       \
+    --table-name             PREFIX_IotLifecycleEvents                \
     --attribute-definitions  AttributeName=clientId,AttributeType=S   \
                              AttributeName=timestamp,AttributeType=N  \
     --key-schema             AttributeName=clientId,KeyType=HASH      \
@@ -195,15 +195,15 @@ First we'll enable actions from AWS IoT to DynamoDB by adding permissions to our
 }
 ```
 
-Now create the role.
+Now create the role. **REPLACE PREFIX with your user defined PREFIX!**
 
 ```bash
 aws iam create-role \
-    --role-name iot-bootcamp \
+    --role-name PREFIX-iot-bootcamp \
     --assume-role-policy-document file://iotbc-iot-role-trust.json
 ```
 
-Create the following permissions document named ```iotbc-iot-role-permission-ddb.json```.  **IMPORTANT**: change the Region and Account ID in the ARN.  Your Account ID can be found in the AWS Console in **My Account**.
+Create the following permissions document named ```iotbc-iot-role-permission-ddb.json```.  **IMPORTANT**: change the Region and Account ID in the ARN.  Your Account ID can be found in the AWS Console in **My Account**.  **REPLACE PREFIX with your user defined PREFIX!**
 
 ```json
 {
@@ -211,23 +211,23 @@ Create the following permissions document named ```iotbc-iot-role-permission-ddb
   "Statement": {
     "Effect": "Allow",
     "Action": "dynamodb:PutItem",
-    "Resource": "arn:aws:dynamodb:[REGION]:[ACCOUNT_ID]:table/IotLifecycleEvents"
+    "Resource": "arn:aws:dynamodb:[REGION]:[ACCOUNT_ID]:table/PREFIX_IotLifecycleEvents"
   }
 }
 ```
 
-Now add the permissions policy to the ```iot-bootcamp``` Role.
+Now add the permissions policy to the ```iot-bootcamp``` Role.  **REPLACE PREFIX with your user defined PREFIX!**
 
 ```bash
 aws iam put-role-policy \
-    --role-name iot-bootcamp \
+    --role-name PREFIX-iot-bootcamp \
     --policy-name iot-ddb-IotLifecycleEvents \
     --policy-document file://iotbc-iot-role-permission-ddb.json
 ```
 
 Create the ```connected``` rule.  The rule SQL uses the ```+``` wildcard to capture all events for your Client ID.
 
-Create the Rule JSON file named ```DynamoDBRule.json```.  **IMPORTANT**: change the Region and Account Number in the ARN. Replace the CLIENT_ID with your Client ID.
+Create the Rule JSON file named ```DynamoDBRule.json```.  **IMPORTANT**: change the Region and Account Number in the ARN. Replace the CLIENT_ID with your Client ID. **REPLACE PREFIX with your user defined PREFIX!**
 
 ```json
 {
@@ -239,7 +239,7 @@ Create the Rule JSON file named ```DynamoDBRule.json```.  **IMPORTANT**: change 
     {
       "dynamoDB": {
         "tableName": "IotLifecycleEvents",
-        "roleArn": "arn:aws:iam::012345678910:role/iot-bootcamp",
+        "roleArn": "arn:aws:iam::012345678910:role/PREFIX-iot-bootcamp",
         "hashKeyField": "clientId",
         "hashKeyValue": "${clientId}",
         "hashKeyType": "STRING",
@@ -252,11 +252,11 @@ Create the Rule JSON file named ```DynamoDBRule.json```.  **IMPORTANT**: change 
 }
 ```
 
-Create the rule, naming it *LifecycleEvents* and using the Topic Rule payload that was created in the previous step.
+Create the rule, naming it *LifecycleEvents* and using the Topic Rule payload that was created in the previous step.  **REPLACE PREFIX with your user defined PREFIX!**
 
 ```bash
 aws iot create-topic-rule \
-    --rule-name LifecycleEvents \
+    --rule-name PREFIX_LifecycleEvents \
     --topic-rule-payload file://DynamoDBRule.json
 ```
    
