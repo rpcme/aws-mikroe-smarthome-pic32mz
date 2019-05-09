@@ -50,7 +50,7 @@ Start MPLAB X.  The start page should appear.
 
 ![MPLAB X Start Page](images/mplabx_start.png)
 
-Open the project.  Use ```File > Open Project...``` in MPLAB X.  From within the dialog box that pops up, navigate to the project directory.  Select ```aws-mikroe-smarthome-pic32mz > amazon-freertos > demos > microchip > curiosity_pic32mzef > mplab```.  Click **Open Project**.
+Open the project.  Use ```File > Open Project...``` in MPLAB X.  From within the dialog box that pops up, navigate to the project directory.  Select ```aws-mikroe-smarthome-pic32mz > smarthome-kit > microchip > curiosity_pic32mzef > mplab```.  Click **Open Project**.
 
 ![MPLAB X Start Page](images/mplabx_project_load.png)
 
