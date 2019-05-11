@@ -243,7 +243,7 @@ Note that the first two will be stored unencrypted in the file ```~/.aws/credent
 ## Outcomes
 In this lab, you installed prerequisites to your workstation and installed lab prerequisites to the AWS Cloud in your account.
 
-[Next Lab](./Section2.md)
+[Next Section](./Section2.md)
 
 [Index](./README.md)
 
