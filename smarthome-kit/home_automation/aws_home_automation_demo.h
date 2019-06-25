@@ -44,7 +44,7 @@
 
 #include "aws_demo.h"
 
-demoDECLARE_DEMO( vStartRemoteHVACDemo );
+void vStartRemoteHVACDemo( void );
 
 #include "FreeRTOS.h"
 #include "remote_hvac/module_hvac.h"
