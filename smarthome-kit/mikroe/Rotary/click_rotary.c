@@ -25,6 +25,7 @@
 
 #include "click_rotary.h"
 #include "click_rotary_hal.h"
+#include "system_config.h"
 
 /* ------------------------------------------------- PRIVATE TYPE DEFINITIONS */
 

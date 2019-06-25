@@ -25,6 +25,7 @@
 
 #include "click_oled_c.h"
 #include "click_oled_c_hal.h"
+#include "system_config.h"
 
 /* ------------------------------------------------------------------- MACROS */
 

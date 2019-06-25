@@ -25,6 +25,7 @@
 
 #include "click_weather.h"
 #include "click_weather_hal.h"
+#include "system_config.h"
 
 /* ------------------------------------------------------------------- MACROS */
 
