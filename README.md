@@ -1,6 +1,6 @@
 # Workshop: Smart Home Thermostat using PIC32MZ
 
-This repository holds a workshop that leads you through a series of learning experiences using Amazon FreeRTOS and Mikroelektronika Flip N Click for PIC32MZ. In working through the workshop labs you learn how you can leverage key AWS IoT for specific cases. After this workshop, you will have a concrete understanding of how to develop for telematics  and command & control using both fundamental FreeRTOS concepts as well as mechanisms used for advanced IoT development.
+This repository holds a workshop that leads you through a series of learning experiences using Amazon FreeRTOS and Mikroelektronika Flip N Click for PIC32MZ. In working through the workshop labs you learn how you can leverage AWS IoT and Amazon FreeRTOS fora  specific use case. After this workshop, you will have a concrete understanding of how to develop for telematics  and command & control using both fundamental FreeRTOS concepts as well as mechanisms used for advanced IoT development.
 
 ## Section 1: Setup the Environment
 

@@ -24,6 +24,20 @@ In this section, you will configure and deploy AWS IoT Core credentials and conf
 
    When the script completes, the keys and certificates will be in the directories specified above. 
 
+The output will look similar to the following:
+
+```text
+Configure aws_clientcredential to use:
+clientcredentialIOT_THING_NAME : mikroe5-node-flipnclick-pic32mz
+clientcredentialMQTT_BROKER_ENDPOINT[] : audqth7zumq6e.iot.us-east-1.amazonaws.com
+clientcredentialWIFI_SSID : self defined
+clientcredentialWIFI_PASSWORD : self defined
+
+Configure aws_clientcredential_keys.h using cert and key at script/../edge/auth-mikroe5-node-flipnclick-pic32mz
+Use header file tool at amazon-freertos/tools/certificate_configuration/CertificateConfigurator.html
+Place the generated header file to amazon-freertos/demos/common/include.
+```
+
 After running the script, your credentials and configuration should be deployed to the source tree.
 
 ## Power on and Connect to Wi-Fi
@@ -50,7 +64,7 @@ Start MPLAB X.  The start page should appear.
 
 ![MPLAB X Start Page](images/mplabx_start.png)
 
-Open the project.  Use ```File > Open Project...``` in MPLAB X.  From within the dialog box that pops up, navigate to the project directory.  Select ```aws-mikroe-smarthome-pic32mz > amazon-freertos > demos > microchip > curiosity_pic32mzef > mplab```.  Click **Open Project**.
+Open the project.  Use ```File > Open Project...``` in MPLAB X.  From within the dialog box that pops up, navigate to the project directory.  Select ```aws-mikroe-smarthome-pic32mz > smarthome-kit > microchip > curiosity_pic32mzef > mplab```.  Click **Open Project**.
 
 ![MPLAB X Start Page](images/mplabx_project_load.png)
 

@@ -75,7 +75,7 @@ cat <<EOF > $dc_afr/policy.json
         {
             "Effect": "Allow",
             "Action": "iot:Connect",
-            "Resource": "arn:aws:iot:*:*:client/${iot:Connection.Thing.ThingName}"
+            "Resource": "arn:aws:iot:*:*:client/\${iot:Connection.Thing.ThingName}"
         },
         {
             "Effect": "Allow",

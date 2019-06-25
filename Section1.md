@@ -11,8 +11,8 @@ If as part of this workshop you received credits to offset any potential cost oc
 The workshop requires you have the following software installed:
 
 - Microchip MPLAB X IDE v5.15 or higher
-- Microchip MPLAB XC32 v2.15 or higher
-- Microchip MPLAB Harmony v2.06 or higher
+- Microchip MPLAB XC32 v2.10 (REQUIRED)
+- Microchip MPLAB Harmony v2.05
 - GNU operating environment, with (minimally):
 	- GNU Coreutils
 	- GNU Shellutils
@@ -243,7 +243,7 @@ Note that the first two will be stored unencrypted in the file ```~/.aws/credent
 ## Outcomes
 In this lab, you installed prerequisites to your workstation and installed lab prerequisites to the AWS Cloud in your account.
 
-[Next Lab](./Section2.md)
+[Next Section](./Section2.md)
 
 [Index](./README.md)
 
