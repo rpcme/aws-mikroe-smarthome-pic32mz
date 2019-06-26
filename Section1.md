@@ -90,7 +90,7 @@ Unless the hardware is still new in box, it will be pre-configured for you prior
 
 The Mikroelekronika Flip N Click has one serial connection to your workstation and an ICSP header that is used to connect to a Microchip debugger such as an MPLAB SNAP or ICD4.
 
-First, ensure you have all components available to you.
+First, ensure you have all components available to you.  You can purchase the [Smart Home PIC32MZ Click Kit for AWS](https://www.mikroe.com/smart-home-pic32mz-click-kit-for-aws) or purchase components individually if you already have some of the parts.
 
 - 1 [MIKROE-2340](https://www.mikroe.com/flipclick-pic32mz) Flip&Click PIC32MZ
 - 1 [MIKROE-1585](https://www.mikroe.com/oled-c-click)	OLED C click	$29	User interface
