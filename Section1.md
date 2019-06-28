@@ -56,9 +56,9 @@ To install the AWS CLI:
 1. Open a new Git Bash shell
 2. Issue the following command:
 
-   ```bash
+```bash
 pip3 install --user awscli
-   ```
+```
 
 You need to then add the AWS CLI to your system path.  Open your Computer preferences, and edit the environment.  Add the following directory to your path, replacing "<user>" with your user id.  Check the path in Windows Explorer before adding to the system path.
 
