@@ -227,7 +227,7 @@ This step will ask for the following pieces of information:
    Popular regions include:
    
    |Region ID|Friendly Name|
-   |------+-------------+
+   |------+-------------|
    |us-east-1|Ohio|
    |us-east-2|Virginia|
    |us-west-2|Oregon|
