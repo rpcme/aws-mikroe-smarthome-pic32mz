@@ -226,14 +226,16 @@ This step will ask for the following pieces of information:
    
    Popular regions include:
    
-|Region ID|Friendly Name|
-|------+-------------|
-|us-east-1|Ohio|
-|us-east-2|Virginia|
-|us-west-2|Oregon|
-|eu-west-1|Dublin|
-|eu-central-1|Frankfurt|
-|ap-northeast-1|Tokyo|
+   ```text
+|Region ID     |Friendly Name|
+|--------------+-------------|
+|us-east-1     | Ohio        |
+|us-east-2     | Virginia    |
+|us-west-2     | Oregon      |
+|eu-west-1     |Dublin       |
+|eu-central-1  |Frankfurt    |
+|ap-northeast-1|Tokyo        |
+   ```
 
    Remember this Region ID for configuration in later sessions.
 	
