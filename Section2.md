@@ -13,7 +13,7 @@ In this section, you will configure and deploy AWS IoT Core credentials and conf
 1. In your GNU shell interface, navigate to the directory containing the scripts.
 
    ```bash
-   cd $HOME/aws-mikroe-smarthome-pic32mz/scripts
+   cd $HOME/aws-mikroe-smarthome-pic32mz/script
    ```
      
 2. Run the script that configures the credentials for the devices to connect to your AWS account through AWS IoT. The edge hardware that you are using in this workshop is uniquely identified with a group prefix within your AWS account. This allows people at multiple tables who may be sharing a corporate AWS account to operate with their own hardware. Make the prefix match the same value used in the previous lab.

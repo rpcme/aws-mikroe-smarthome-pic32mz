@@ -48,6 +48,30 @@ Microchip supports MPLAB X on the Windows, Mac OSX, and Linux operating systems.
 
 Python 3.x (modern: 3.7.x) is required to install the AWS CLI.
 
+#### Windows
+
+Python 3 is already installed with Git Bash.  If not, then then Python3 can be installed from the Python3 website at https://www.python.org/downloads/windows/ .  Choose the latest version of Python 3.  When installing, ensure to add Python3 to your PATH.
+
+To install the AWS CLI:
+1. Open a new Git Bash shell
+2. Issue the following command:
+
+```bash
+pip3 install --user awscli
+```
+
+You need to then add the AWS CLI to your system path.  Open your Computer preferences, and edit the environment.  Add the following directory to your path, replacing "<user>" with your user id.  Check the path in Windows Explorer before adding to the system path.
+
+```
+C:\Users\<user>\Appdata\Roaming\python\Python37\Script
+```
+
+After saving the new environment setting, open a new Git Bash shell and issue the following command to verify that the AWS CLI has been installed and the environment configured properly:
+
+```bash
+which aws
+```
+
 #### Linux
 
 If Python 3 is not already installed, do so:
@@ -226,16 +250,19 @@ This step will ask for the following pieces of information:
    
    Popular regions include:
    
-   |Region ID|Friendly Name|
-   |------+-------------+
-   |us-east-1|Ohio|
-   |us-east-2|Virginia|
-   |us-west-2|Oregon|
-   |eu-west-1|Dublin|
-   |eu-central-1|Frankfurt|
-   |ap-northeast-1|Tokyo|
+```
+|Region ID     |Friendly Name|
+|--------------+-------------|
+|us-east-1     | Ohio        |
+|us-east-2     | Virginia    |
+|us-west-2     | Oregon      |
+|eu-west-1     |Dublin       |
+|eu-central-1  |Frankfurt    |
+|ap-northeast-1|Tokyo        |
+```
 
-	Remember this Region ID for configuration in later sessions.
+   Remember this Region ID for configuration in later sessions.
+	
 4. Default output format - use ```json```
 
 Note that the first two will be stored unencrypted in the file ```~/.aws/credentials```, the rest will be stored in ```~/.aws/config```. For your security, delete the credentials file at the end of the workshop.
