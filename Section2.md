@@ -166,7 +166,7 @@ In this section, a DynamoDB table will be setup to capture AWS IoT Lifecycle Eve
 Let's first look at what the Lifecycle Event data gives us so an effective decision on the table schema can be made.  The 'U' column denotes global uniqueness.
 
 | U | Attribute           | Connected | Disconnected | Subscribed | Unsubscribed |
-|---+---------------------+-----------+--------------+------------+--------------|
+|---|---------------------|-----------|--------------|------------|--------------|
 | X | clientId            | X         | X            | X          | X            |
 |   | timestamp           | X         | X            | X          | X            |
 |   | eventType           | X         | X            | X          | X            |
