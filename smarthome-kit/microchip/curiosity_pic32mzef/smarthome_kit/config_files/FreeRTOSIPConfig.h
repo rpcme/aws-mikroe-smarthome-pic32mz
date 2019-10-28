@@ -1,5 +1,5 @@
 /*
- * FreeRTOS Kernel V10.0.1
+ * FreeRTOS Kernel V10.2.0
  * Copyright (C) 2017 Amazon.com, Inc. or its affiliates.  All Rights Reserved.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy of
@@ -45,7 +45,7 @@ extern void vLoggingPrintf( const char * pcFormatString,
  * out the debugging messages. */
 #define ipconfigHAS_DEBUG_PRINTF    0
 #if ( ipconfigHAS_DEBUG_PRINTF == 1 )
-    #define FreeRTOS_debug_printf( X )    vLoggingPrintf( X )
+    #define FreeRTOS_debug_printf( X )    vLoggingPrintf X 
 #endif
 
 /* Set to 1 to print out non debugging messages, for example the output of the
@@ -272,7 +272,15 @@ extern uint32_t ulRand();
  * This has to do with the contents of the IP-packets: all 32-bit fields are
  * 32-bit-aligned, plus 16-bit(!) */
 #define ipconfigPACKET_FILLER_SIZE                     2
-#define ipconfigBUFFER_PADDING                         10
+#ifdef PIC32_USE_ETHERNET
+	/* The Ethernet driver wants to store an extra pointer before the actual network packet.
+	However, the upcoming IPv6 library will use that space to store the packet type. */
+	#define ipconfigBUFFER_PADDING                         14
+#else
+	/* The WiFi driver has a regular buffer allocation using pvPortMalloc().
+	The driver doesn't store anything in the space before the Ethernet packet. */
+	#define ipconfigBUFFER_PADDING                         10
+#endif
 
 /* Define the size of the pool of TCP window descriptors.  On the average, each
  * TCP socket will use up to 2 x 6 descriptors, meaning that it can have 2 x 6
