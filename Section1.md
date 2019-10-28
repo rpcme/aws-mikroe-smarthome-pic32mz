@@ -220,6 +220,8 @@ In this section, you will clone the workshop Git repository.  The Git repository
    ```bash
    git clone --recursive https://github.com/rpcme/aws-mikroe-smarthome-pic32mz
    cd aws-mikroe-smarthome-pic32mz
+   git checkout 1.0
+   git submodule update amazon-freertos
    ```
    
    The total repository size is more than 30MB so it may take some time to download. Please be patient.
