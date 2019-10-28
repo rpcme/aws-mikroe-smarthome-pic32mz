@@ -1,5 +1,5 @@
 /*
- * Amazon FreeRTOS V1.4.4
+ * Amazon FreeRTOS V1.4.8
  * Copyright (C) 2017 Amazon.com, Inc. or its affiliates.  All Rights Reserved.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy of
@@ -24,7 +24,7 @@
  */
 
 /**
- * @file aws_mqtt_agent_config.h
+ * @file iot_mqtt_agent_config.h
  * @brief MQTT agent config options.
  */
 
