@@ -971,7 +971,7 @@ static int CommandQuit(SYS_CMD_DEVICE_NODE* pCmdIO, int argc, char** argv)
     return 1;
 }
 
-#include "aws_logging_task.h"
+#include "iot_logging_task.h"
 
 static int CommandLogging(SYS_CMD_DEVICE_NODE* pCmdIO, int argc, char** argv)
 {
