@@ -1,41 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configurationDescriptor version="65">
   <logicalFolder name="root" displayName="root" projectFiles="true">
-    <logicalFolder name="f1" displayName="application" projectFiles="true">
-      <logicalFolder name="application_code"
-                     displayName="application_code"
-                     projectFiles="true">
-        <logicalFolder name="microchip_code"
-                       displayName="microchip_code"
-                       projectFiles="true">
-          <itemPath>../common/application_code/microchip_code/rtos_hooks.c</itemPath>
-          <itemPath>../common/application_code/microchip_code/system_exceptions.c</itemPath>
-          <itemPath>../common/application_code/microchip_code/system_init.c</itemPath>
-          <itemPath>../common/application_code/microchip_code/system_interrupt.c</itemPath>
-          <itemPath>../common/application_code/microchip_code/system_interrupt_a.S</itemPath>
-          <itemPath>../common/application_code/microchip_code/system_tasks.c</itemPath>
-          <itemPath>../common/application_code/microchip_code/system_config.h</itemPath>
-          <itemPath>../common/application_code/microchip_code/system_definitions.h</itemPath>
-        </logicalFolder>
-        <itemPath>../common/application_code/main.c</itemPath>
-      </logicalFolder>
-      <logicalFolder name="config_files"
-                     displayName="config_files"
-                     projectFiles="true">
-        <itemPath>../common/config_files/aws_bufferpool_config.h</itemPath>
-        <itemPath>../common/config_files/aws_demo_config.h</itemPath>
-        <itemPath>../common/config_files/aws_ggd_config.h</itemPath>
-        <itemPath>../common/config_files/aws_iot_network_config.h</itemPath>
-        <itemPath>../common/config_files/aws_mqtt_agent_config.h</itemPath>
-        <itemPath>../common/config_files/aws_mqtt_config.h</itemPath>
-        <itemPath>../common/config_files/aws_pkcs11_config.h</itemPath>
-        <itemPath>../common/config_files/aws_secure_sockets_config.h</itemPath>
-        <itemPath>../common/config_files/aws_wifi_config.h</itemPath>
-        <itemPath>../common/config_files/FreeRTOSConfig.h</itemPath>
-        <itemPath>../common/config_files/FreeRTOSIPConfig.h</itemPath>
-        <itemPath>../common/config_files/iot_config.h</itemPath>
-      </logicalFolder>
-    </logicalFolder>
     <logicalFolder name="demos" displayName="demos" projectFiles="true">
       <logicalFolder name="defender" displayName="defender" projectFiles="true">
         <itemPath>../../../../amazon-freertos/demos/defender/aws_iot_demo_defender.c</itemPath>
@@ -44,8 +9,8 @@
         <itemPath>../../../../amazon-freertos/demos/demo_runner/aws_demo.c</itemPath>
         <itemPath>../../../../amazon-freertos/demos/demo_runner/aws_demo_network_addr.c</itemPath>
         <itemPath>../../../../amazon-freertos/demos/demo_runner/aws_demo_version.c</itemPath>
-        <itemPath>../../../../amazon-freertos/demos/demo_runner/iot_demo_afr.c</itemPath>
         <itemPath>../../../../amazon-freertos/demos/demo_runner/iot_demo_runner.c</itemPath>
+        <itemPath>../../../../amazon-freertos/demos/demo_runner/iot_demo_freertos.c</itemPath>
       </logicalFolder>
       <logicalFolder name="dev_mode_key_provisioning"
                      displayName="dev_mode_key_provisioning"
@@ -55,7 +20,6 @@
         </logicalFolder>
         <logicalFolder name="src" displayName="src" projectFiles="true">
           <itemPath>../../../../amazon-freertos/demos/dev_mode_key_provisioning/src/aws_dev_mode_key_provisioning.c</itemPath>
-          <itemPath>../../../../amazon-freertos/demos/dev_mode_key_provisioning/src/pem2der.c</itemPath>
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="greengrass_connectivity"
@@ -63,16 +27,20 @@
                      projectFiles="true">
         <itemPath>../../../../amazon-freertos/demos/greengrass_connectivity/aws_greengrass_discovery_demo.c</itemPath>
       </logicalFolder>
+      <logicalFolder name="f1" displayName="https" projectFiles="true">
+        <itemPath>../../../../amazon-freertos/demos/https/iot_demo_https_common.c</itemPath>
+        <itemPath>../../../../amazon-freertos/demos/https/iot_demo_https_s3_download_async.c</itemPath>
+        <itemPath>../../../../amazon-freertos/demos/https/iot_demo_https_s3_download_sync.c</itemPath>
+        <itemPath>../../../../amazon-freertos/demos/https/iot_demo_https_s3_upload_async.c</itemPath>
+        <itemPath>../../../../amazon-freertos/demos/https/iot_demo_https_s3_upload_sync.c</itemPath>
+      </logicalFolder>
       <logicalFolder name="include" displayName="include" projectFiles="true">
         <itemPath>../../../../amazon-freertos/demos/include/aws_application_version.h</itemPath>
-        <itemPath>../../../../amazon-freertos/demos/include/aws_ble_gatt_server_demo.h</itemPath>
         <itemPath>../../../../amazon-freertos/demos/include/aws_clientcredential.h</itemPath>
         <itemPath>../../../../amazon-freertos/demos/include/aws_clientcredential_keys.h</itemPath>
         <itemPath>../../../../amazon-freertos/demos/include/aws_demo.h</itemPath>
         <itemPath>../../../../amazon-freertos/demos/include/aws_iot_demo_network.h</itemPath>
         <itemPath>../../../../amazon-freertos/demos/include/aws_ota_codesigner_certificate.h</itemPath>
-        <itemPath>../../../../amazon-freertos/demos/include/aws_wifi_connect_task.h</itemPath>
-        <itemPath>../../../../amazon-freertos/demos/include/iot_ble_numericComparison.h</itemPath>
         <itemPath>../../../../amazon-freertos/demos/include/iot_config_common.h</itemPath>
         <itemPath>../../../../amazon-freertos/demos/include/iot_demo_logging.h</itemPath>
         <itemPath>../../../../amazon-freertos/demos/include/iot_demo_runner.h</itemPath>
@@ -116,6 +84,8 @@
         <itemPath>../../../../amazon-freertos/freertos_kernel/include/stream_buffer.h</itemPath>
         <itemPath>../../../../amazon-freertos/freertos_kernel/include/task.h</itemPath>
         <itemPath>../../../../amazon-freertos/freertos_kernel/include/timers.h</itemPath>
+        <itemPath>../../../../amazon-freertos/freertos_kernel/include/croutine.h</itemPath>
+        <itemPath>../../../../amazon-freertos/freertos_kernel/include/StackMacros.h</itemPath>
       </logicalFolder>
       <logicalFolder name="f2" displayName="portable" projectFiles="true">
         <logicalFolder name="f1" displayName="MemMang" projectFiles="true">
@@ -123,7 +93,6 @@
         </logicalFolder>
         <logicalFolder name="f2" displayName="MPLAB" projectFiles="true">
           <logicalFolder name="f1" displayName="PIC32MZ" projectFiles="true">
-            <itemPath>../../../../amazon-freertos/freertos_kernel/portable/MPLAB/PIC32MZ/ISR_Support.h</itemPath>
             <itemPath>../../../../amazon-freertos/freertos_kernel/portable/MPLAB/PIC32MZ/port.c</itemPath>
             <itemPath>../../../../amazon-freertos/freertos_kernel/portable/MPLAB/PIC32MZ/port_asm.S</itemPath>
             <itemPath>../../../../amazon-freertos/freertos_kernel/portable/MPLAB/PIC32MZ/portmacro.h</itemPath>
@@ -139,6 +108,10 @@
     </logicalFolder>
     <logicalFolder name="f3" displayName="libraries" projectFiles="true">
       <logicalFolder name="f1" displayName="3rdparty" projectFiles="true">
+        <logicalFolder name="f1" displayName="http_parser" projectFiles="true">
+          <itemPath>../../../../amazon-freertos/libraries/3rdparty/http_parser/http_parser.c</itemPath>
+          <itemPath>../../../../amazon-freertos/libraries/3rdparty/http_parser/http_parser.h</itemPath>
+        </logicalFolder>
         <logicalFolder name="jsmn" displayName="jsmn" projectFiles="true">
           <itemPath>../../../../amazon-freertos/libraries/3rdparty/jsmn/jsmn.c</itemPath>
           <itemPath>../../../../amazon-freertos/libraries/3rdparty/jsmn/jsmn.h</itemPath>
@@ -293,6 +266,9 @@
             <itemPath>../../../../amazon-freertos/libraries/3rdparty/mbedtls/library/x509write_csr.c</itemPath>
             <itemPath>../../../../amazon-freertos/libraries/3rdparty/mbedtls/library/xtea.c</itemPath>
           </logicalFolder>
+          <logicalFolder name="f1" displayName="utils" projectFiles="true">
+            <itemPath>../../../../amazon-freertos/libraries/3rdparty/mbedtls/utils/mbedtls_utils.c</itemPath>
+          </logicalFolder>
         </logicalFolder>
         <logicalFolder name="pkcs11" displayName="pkcs11" projectFiles="true">
           <itemPath>../../../../amazon-freertos/libraries/3rdparty/pkcs11/pkcs11.h</itemPath>
@@ -300,18 +276,12 @@
           <itemPath>../../../../amazon-freertos/libraries/3rdparty/pkcs11/pkcs11t.h</itemPath>
         </logicalFolder>
         <logicalFolder name="tinycbor" displayName="tinycbor" projectFiles="true">
-          <itemPath>../../../../amazon-freertos/libraries/3rdparty/tinycbor/assert_p.h</itemPath>
-          <itemPath>../../../../amazon-freertos/libraries/3rdparty/tinycbor/cbor.h</itemPath>
-          <itemPath>../../../../amazon-freertos/libraries/3rdparty/tinycbor/cborconstants_p.h</itemPath>
           <itemPath>../../../../amazon-freertos/libraries/3rdparty/tinycbor/cborencoder.c</itemPath>
           <itemPath>../../../../amazon-freertos/libraries/3rdparty/tinycbor/cborencoder_close_container_checked.c</itemPath>
           <itemPath>../../../../amazon-freertos/libraries/3rdparty/tinycbor/cborerrorstrings.c</itemPath>
           <itemPath>../../../../amazon-freertos/libraries/3rdparty/tinycbor/cborparser.c</itemPath>
           <itemPath>../../../../amazon-freertos/libraries/3rdparty/tinycbor/cborparser_dup_string.c</itemPath>
           <itemPath>../../../../amazon-freertos/libraries/3rdparty/tinycbor/cborpretty.c</itemPath>
-          <itemPath>../../../../amazon-freertos/libraries/3rdparty/tinycbor/compilersupport_p.h</itemPath>
-          <itemPath>../../../../amazon-freertos/libraries/3rdparty/tinycbor/extract_number_p.h</itemPath>
-          <itemPath>../../../../amazon-freertos/libraries/3rdparty/tinycbor/math_support_p.h</itemPath>
         </logicalFolder>
         <logicalFolder name="tinycrypt" displayName="tinycrypt" projectFiles="true">
           <logicalFolder name="asn1" displayName="asn1" projectFiles="true">
@@ -361,26 +331,25 @@
       <logicalFolder name="f3" displayName="abstractions" projectFiles="true">
         <logicalFolder name="pkcs11" displayName="pkcs11" projectFiles="true">
           <logicalFolder name="include" displayName="include" projectFiles="true">
-            <itemPath>../../../../amazon-freertos/libraries/abstractions/pkcs11/include/aws_pkcs11.h</itemPath>
+            <itemPath>../../../../amazon-freertos/libraries/abstractions/pkcs11/include/iot_pkcs11_pal.h</itemPath>
           </logicalFolder>
           <logicalFolder name="mbedtls" displayName="mbedtls" projectFiles="true">
-            <itemPath>../../../../amazon-freertos/libraries/abstractions/pkcs11/mbedtls/aws_pkcs11_mbedtls.c</itemPath>
             <itemPath>../../../../amazon-freertos/libraries/abstractions/pkcs11/mbedtls/threading_alt.h</itemPath>
+            <itemPath>../../../../amazon-freertos/libraries/abstractions/pkcs11/mbedtls/iot_pkcs11_mbedtls.c</itemPath>
           </logicalFolder>
         </logicalFolder>
         <logicalFolder name="platform" displayName="platform" projectFiles="true">
           <logicalFolder name="freertos" displayName="freertos" projectFiles="true">
             <logicalFolder name="include" displayName="include" projectFiles="true">
               <logicalFolder name="platform" displayName="platform" projectFiles="true">
-                <itemPath>../../../../amazon-freertos/libraries/abstractions/platform/freertos/include/platform/iot_network_afr.h</itemPath>
-                <itemPath>../../../../amazon-freertos/libraries/abstractions/platform/freertos/include/platform/iot_network_ble.h</itemPath>
-                <itemPath>../../../../amazon-freertos/libraries/abstractions/platform/freertos/include/platform/iot_platform_types_afr.h</itemPath>
+                <itemPath>../../../../amazon-freertos/libraries/abstractions/platform/freertos/include/platform/iot_network_freertos.h</itemPath>
+                <itemPath>../../../../amazon-freertos/libraries/abstractions/platform/freertos/include/platform/iot_platform_types_freertos.h</itemPath>
               </logicalFolder>
             </logicalFolder>
-            <itemPath>../../../../amazon-freertos/libraries/abstractions/platform/freertos/iot_clock_afr.c</itemPath>
+            <itemPath>../../../../amazon-freertos/libraries/abstractions/platform/freertos/iot_clock_freertos.c</itemPath>
             <itemPath>../../../../amazon-freertos/libraries/abstractions/platform/freertos/iot_metrics.c</itemPath>
-            <itemPath>../../../../amazon-freertos/libraries/abstractions/platform/freertos/iot_network_afr.c</itemPath>
-            <itemPath>../../../../amazon-freertos/libraries/abstractions/platform/freertos/iot_threads_afr.c</itemPath>
+            <itemPath>../../../../amazon-freertos/libraries/abstractions/platform/freertos/iot_network_freertos.c</itemPath>
+            <itemPath>../../../../amazon-freertos/libraries/abstractions/platform/freertos/iot_threads_freertos.c</itemPath>
           </logicalFolder>
           <logicalFolder name="include" displayName="include" projectFiles="true">
             <logicalFolder name="platform" displayName="platform" projectFiles="true">
@@ -421,17 +390,17 @@
           <logicalFolder name="freertos_plus_tcp"
                          displayName="freertos_plus_tcp"
                          projectFiles="true">
-            <itemPath>../../../../amazon-freertos/libraries/abstractions/secure_sockets/freertos_plus_tcp/aws_secure_sockets.c</itemPath>
+            <itemPath>../../../../amazon-freertos/libraries/abstractions/secure_sockets/freertos_plus_tcp/iot_secure_sockets.c</itemPath>
           </logicalFolder>
           <logicalFolder name="include" displayName="include" projectFiles="true">
-            <itemPath>../../../../amazon-freertos/libraries/abstractions/secure_sockets/include/aws_secure_sockets.h</itemPath>
-            <itemPath>../../../../amazon-freertos/libraries/abstractions/secure_sockets/include/aws_secure_sockets_config_defaults.h</itemPath>
-            <itemPath>../../../../amazon-freertos/libraries/abstractions/secure_sockets/include/aws_secure_sockets_wrapper_metrics.h</itemPath>
+            <itemPath>../../../../amazon-freertos/libraries/abstractions/secure_sockets/include/iot_secure_sockets.h</itemPath>
+            <itemPath>../../../../amazon-freertos/libraries/abstractions/secure_sockets/include/iot_secure_sockets_config_defaults.h</itemPath>
+            <itemPath>../../../../amazon-freertos/libraries/abstractions/secure_sockets/include/iot_secure_sockets_wrapper_metrics.h</itemPath>
           </logicalFolder>
         </logicalFolder>
         <logicalFolder name="wifi" displayName="wifi" projectFiles="true">
           <logicalFolder name="include" displayName="include" projectFiles="true">
-            <itemPath>../../../../amazon-freertos/libraries/abstractions/wifi/include/aws_wifi.h</itemPath>
+            <itemPath>../../../../amazon-freertos/libraries/abstractions/wifi/include/iot_wifi.h</itemPath>
           </logicalFolder>
         </logicalFolder>
       </logicalFolder>
@@ -439,7 +408,6 @@
         <logicalFolder name="aws" displayName="aws" projectFiles="true">
           <logicalFolder name="defender" displayName="defender" projectFiles="true">
             <logicalFolder name="include" displayName="include" projectFiles="true">
-              <itemPath>../../../../amazon-freertos/libraries/c_sdk/aws/defender/include/aws_defender.h</itemPath>
               <itemPath>../../../../amazon-freertos/libraries/c_sdk/aws/defender/include/aws_iot_defender.h</itemPath>
             </logicalFolder>
             <logicalFolder name="src" displayName="src" projectFiles="true">
@@ -454,16 +422,10 @@
           </logicalFolder>
           <logicalFolder name="shadow" displayName="shadow" projectFiles="true">
             <logicalFolder name="include" displayName="include" projectFiles="true">
-              <logicalFolder name="types" displayName="types" projectFiles="true">
-                <itemPath>../../../../amazon-freertos/libraries/c_sdk/aws/shadow/include/types/aws_iot_shadow_types.h</itemPath>
-              </logicalFolder>
               <itemPath>../../../../amazon-freertos/libraries/c_sdk/aws/shadow/include/aws_iot_shadow.h</itemPath>
               <itemPath>../../../../amazon-freertos/libraries/c_sdk/aws/shadow/include/aws_shadow.h</itemPath>
             </logicalFolder>
             <logicalFolder name="src" displayName="src" projectFiles="true">
-              <logicalFolder name="private" displayName="private" projectFiles="true">
-                <itemPath>../../../../amazon-freertos/libraries/c_sdk/aws/shadow/src/private/aws_iot_shadow_internal.h</itemPath>
-              </logicalFolder>
               <itemPath>../../../../amazon-freertos/libraries/c_sdk/aws/shadow/src/aws_iot_shadow_api.c</itemPath>
               <itemPath>../../../../amazon-freertos/libraries/c_sdk/aws/shadow/src/aws_iot_shadow_operation.c</itemPath>
               <itemPath>../../../../amazon-freertos/libraries/c_sdk/aws/shadow/src/aws_iot_shadow_parser.c</itemPath>
@@ -478,29 +440,23 @@
           <logicalFolder name="common" displayName="common" projectFiles="true">
             <logicalFolder name="include" displayName="include" projectFiles="true">
               <logicalFolder name="private" displayName="private" projectFiles="true">
-                <itemPath>../../../../amazon-freertos/libraries/c_sdk/standard/common/include/private/aws_default_root_certificates.h</itemPath>
-                <itemPath>../../../../amazon-freertos/libraries/c_sdk/standard/common/include/private/aws_doubly_linked_list.h</itemPath>
-                <itemPath>../../../../amazon-freertos/libraries/c_sdk/standard/common/include/private/aws_lib_init.h</itemPath>
-                <itemPath>../../../../amazon-freertos/libraries/c_sdk/standard/common/include/private/iot_error.h</itemPath>
                 <itemPath>../../../../amazon-freertos/libraries/c_sdk/standard/common/include/private/iot_logging.h</itemPath>
-                <itemPath>../../../../amazon-freertos/libraries/c_sdk/standard/common/include/private/iot_static_memory.h</itemPath>
                 <itemPath>../../../../amazon-freertos/libraries/c_sdk/standard/common/include/private/iot_taskpool_internal.h</itemPath>
               </logicalFolder>
               <logicalFolder name="types" displayName="types" projectFiles="true">
                 <itemPath>../../../../amazon-freertos/libraries/c_sdk/standard/common/include/types/iot_network_types.h</itemPath>
                 <itemPath>../../../../amazon-freertos/libraries/c_sdk/standard/common/include/types/iot_taskpool_types.h</itemPath>
               </logicalFolder>
-              <itemPath>../../../../amazon-freertos/libraries/c_sdk/standard/common/include/aws_appversion32.h</itemPath>
-              <itemPath>../../../../amazon-freertos/libraries/c_sdk/standard/common/include/aws_logging_task.h</itemPath>
-              <itemPath>../../../../amazon-freertos/libraries/c_sdk/standard/common/include/iot_atomic.h</itemPath>
+              <itemPath>../../../../amazon-freertos/libraries/c_sdk/standard/common/include/iot_appversion32.h</itemPath>
               <itemPath>../../../../amazon-freertos/libraries/c_sdk/standard/common/include/iot_init.h</itemPath>
               <itemPath>../../../../amazon-freertos/libraries/c_sdk/standard/common/include/iot_linear_containers.h</itemPath>
               <itemPath>../../../../amazon-freertos/libraries/c_sdk/standard/common/include/iot_logging_setup.h</itemPath>
+              <itemPath>../../../../amazon-freertos/libraries/c_sdk/standard/common/include/iot_logging_task.h</itemPath>
               <itemPath>../../../../amazon-freertos/libraries/c_sdk/standard/common/include/iot_taskpool.h</itemPath>
             </logicalFolder>
             <logicalFolder name="logging" displayName="logging" projectFiles="true">
-              <itemPath>../../../../amazon-freertos/libraries/c_sdk/standard/common/logging/aws_logging_task_dynamic_buffers.c</itemPath>
               <itemPath>../../../../amazon-freertos/libraries/c_sdk/standard/common/logging/iot_logging.c</itemPath>
+              <itemPath>../../../../amazon-freertos/libraries/c_sdk/standard/common/logging/iot_logging_task_dynamic_buffers.c</itemPath>
             </logicalFolder>
             <logicalFolder name="taskpool" displayName="taskpool" projectFiles="true">
               <itemPath>../../../../amazon-freertos/libraries/c_sdk/standard/common/taskpool/iot_taskpool.c</itemPath>
@@ -508,23 +464,16 @@
             </logicalFolder>
             <itemPath>../../../../amazon-freertos/libraries/c_sdk/standard/common/iot_init.c</itemPath>
             <itemPath>../../../../amazon-freertos/libraries/c_sdk/standard/common/iot_static_memory_common.c</itemPath>
+            <itemPath>../../../../amazon-freertos/libraries/c_sdk/standard/common/iot_device_metrics.c</itemPath>
+          </logicalFolder>
+          <logicalFolder name="f1" displayName="https" projectFiles="true">
+            <logicalFolder name="f1" displayName="src" projectFiles="true">
+              <itemPath>../../../../amazon-freertos/libraries/c_sdk/standard/https/src/iot_https_client.c</itemPath>
+              <itemPath>../../../../amazon-freertos/libraries/c_sdk/standard/https/src/iot_https_utils.c</itemPath>
+            </logicalFolder>
           </logicalFolder>
           <logicalFolder name="mqtt" displayName="mqtt" projectFiles="true">
-            <logicalFolder name="include" displayName="include" projectFiles="true">
-              <logicalFolder name="types" displayName="types" projectFiles="true">
-                <itemPath>../../../../amazon-freertos/libraries/c_sdk/standard/mqtt/include/types/iot_mqtt_types.h</itemPath>
-              </logicalFolder>
-              <itemPath>../../../../amazon-freertos/libraries/c_sdk/standard/mqtt/include/aws_mqtt_agent.h</itemPath>
-              <itemPath>../../../../amazon-freertos/libraries/c_sdk/standard/mqtt/include/aws_mqtt_agent_config_defaults.h</itemPath>
-              <itemPath>../../../../amazon-freertos/libraries/c_sdk/standard/mqtt/include/aws_mqtt_config_defaults.h</itemPath>
-              <itemPath>../../../../amazon-freertos/libraries/c_sdk/standard/mqtt/include/aws_mqtt_lib.h</itemPath>
-              <itemPath>../../../../amazon-freertos/libraries/c_sdk/standard/mqtt/include/iot_mqtt.h</itemPath>
-            </logicalFolder>
             <logicalFolder name="src" displayName="src" projectFiles="true">
-              <logicalFolder name="private" displayName="private" projectFiles="true">
-                <itemPath>../../../../amazon-freertos/libraries/c_sdk/standard/mqtt/src/private/iot_mqtt_internal.h</itemPath>
-              </logicalFolder>
-              <itemPath>../../../../amazon-freertos/libraries/c_sdk/standard/mqtt/src/aws_mqtt_agent.c</itemPath>
               <itemPath>../../../../amazon-freertos/libraries/c_sdk/standard/mqtt/src/iot_mqtt_api.c</itemPath>
               <itemPath>../../../../amazon-freertos/libraries/c_sdk/standard/mqtt/src/iot_mqtt_network.c</itemPath>
               <itemPath>../../../../amazon-freertos/libraries/c_sdk/standard/mqtt/src/iot_mqtt_operation.c</itemPath>
@@ -532,6 +481,7 @@
               <itemPath>../../../../amazon-freertos/libraries/c_sdk/standard/mqtt/src/iot_mqtt_static_memory.c</itemPath>
               <itemPath>../../../../amazon-freertos/libraries/c_sdk/standard/mqtt/src/iot_mqtt_subscription.c</itemPath>
               <itemPath>../../../../amazon-freertos/libraries/c_sdk/standard/mqtt/src/iot_mqtt_validate.c</itemPath>
+              <itemPath>../../../../amazon-freertos/libraries/c_sdk/standard/mqtt/src/iot_mqtt_agent.c</itemPath>
             </logicalFolder>
           </logicalFolder>
           <logicalFolder name="serializer" displayName="serializer" projectFiles="true">
@@ -545,8 +495,8 @@
                 <itemPath>../../../../amazon-freertos/libraries/c_sdk/standard/serializer/src/cbor/iot_serializer_tinycbor_encoder.c</itemPath>
               </logicalFolder>
               <logicalFolder name="json" displayName="json" projectFiles="true">
-                <itemPath>../../../../amazon-freertos/libraries/c_sdk/standard/serializer/src/json/aws_iot_serializer_json_decoder.c</itemPath>
-                <itemPath>../../../../amazon-freertos/libraries/c_sdk/standard/serializer/src/json/aws_iot_serializer_json_encoder.c</itemPath>
+                <itemPath>../../../../amazon-freertos/libraries/c_sdk/standard/serializer/src/json/iot_serializer_json_decoder.c</itemPath>
+                <itemPath>../../../../amazon-freertos/libraries/c_sdk/standard/serializer/src/json/iot_serializer_json_encoder.c</itemPath>
               </logicalFolder>
               <itemPath>../../../../amazon-freertos/libraries/c_sdk/standard/serializer/src/iot_json_utils.c</itemPath>
               <itemPath>../../../../amazon-freertos/libraries/c_sdk/standard/serializer/src/iot_serializer_static_memory.c</itemPath>
@@ -570,22 +520,25 @@
           <logicalFolder name="ota" displayName="ota" projectFiles="true">
             <logicalFolder name="include" displayName="include" projectFiles="true">
               <itemPath>../../../../amazon-freertos/libraries/freertos_plus/aws/ota/include/aws_iot_ota_agent.h</itemPath>
-              <itemPath>../../../../amazon-freertos/libraries/freertos_plus/aws/ota/include/aws_ota_agent.h</itemPath>
               <itemPath>../../../../amazon-freertos/libraries/freertos_plus/aws/ota/include/aws_ota_types.h</itemPath>
             </logicalFolder>
             <logicalFolder name="src" displayName="src" projectFiles="true">
               <itemPath>../../../../amazon-freertos/libraries/freertos_plus/aws/ota/src/aws_iot_ota_agent.c</itemPath>
+              <itemPath>../../../../amazon-freertos/libraries/freertos_plus/aws/ota/src/aws_ota_agent_internal.h</itemPath>
               <itemPath>../../../../amazon-freertos/libraries/freertos_plus/aws/ota/src/aws_ota_cbor.c</itemPath>
+              <itemPath>../../../../amazon-freertos/libraries/freertos_plus/aws/ota/src/aws_ota_cbor.h</itemPath>
+              <itemPath>../../../../amazon-freertos/libraries/freertos_plus/aws/ota/src/aws_ota_cbor_internal.h</itemPath>
+              <itemPath>../../../../amazon-freertos/libraries/freertos_plus/aws/ota/src/aws_ota_pal.h</itemPath>
             </logicalFolder>
           </logicalFolder>
         </logicalFolder>
         <logicalFolder name="f1" displayName="standard" projectFiles="true">
           <logicalFolder name="crypto" displayName="crypto" projectFiles="true">
             <logicalFolder name="include" displayName="include" projectFiles="true">
-              <itemPath>../../../../amazon-freertos/libraries/freertos_plus/standard/crypto/include/aws_crypto.h</itemPath>
+              <itemPath>../../../../amazon-freertos/libraries/freertos_plus/standard/crypto/include/iot_crypto.h</itemPath>
             </logicalFolder>
             <logicalFolder name="src" displayName="src" projectFiles="true">
-              <itemPath>../../../../amazon-freertos/libraries/freertos_plus/standard/crypto/src/aws_crypto.c</itemPath>
+              <itemPath>../../../../amazon-freertos/libraries/freertos_plus/standard/crypto/src/iot_crypto.c</itemPath>
             </logicalFolder>
           </logicalFolder>
           <logicalFolder name="f1" displayName="freertos_plus_posix" projectFiles="true">
@@ -652,20 +605,30 @@
               <itemPath>../../../../amazon-freertos/libraries/freertos_plus/standard/freertos_plus_tcp/source/FreeRTOS_UDP_IP.c</itemPath>
             </logicalFolder>
           </logicalFolder>
+          <logicalFolder name="f2" displayName="pkcs11" projectFiles="true">
+            <logicalFolder name="f1" displayName="include" projectFiles="true">
+              <itemPath>../../../../amazon-freertos/libraries/freertos_plus/standard/pkcs11/include/iot_pkcs11.h</itemPath>
+            </logicalFolder>
+            <logicalFolder name="f2" displayName="src" projectFiles="true">
+              <itemPath>../../../../amazon-freertos/libraries/freertos_plus/standard/pkcs11/src/iot_pkcs11.c</itemPath>
+            </logicalFolder>
+          </logicalFolder>
           <logicalFolder name="tls" displayName="tls" projectFiles="true">
             <logicalFolder name="include" displayName="include" projectFiles="true">
-              <itemPath>../../../../amazon-freertos/libraries/freertos_plus/standard/tls/include/aws_tls.h</itemPath>
+              <itemPath>../../../../amazon-freertos/libraries/freertos_plus/standard/tls/include/iot_tls.h</itemPath>
             </logicalFolder>
             <logicalFolder name="src" displayName="src" projectFiles="true">
-              <itemPath>../../../../amazon-freertos/libraries/freertos_plus/standard/tls/src/aws_tls.c</itemPath>
+              <itemPath>../../../../amazon-freertos/libraries/freertos_plus/standard/tls/src/iot_tls.c</itemPath>
             </logicalFolder>
           </logicalFolder>
           <logicalFolder name="utils" displayName="utils" projectFiles="true">
             <logicalFolder name="include" displayName="include" projectFiles="true">
-              <itemPath>../../../../amazon-freertos/libraries/freertos_plus/standard/utils/include/aws_system_init.h</itemPath>
+              <itemPath>../../../../amazon-freertos/libraries/freertos_plus/standard/utils/include/iot_pki_utils.h</itemPath>
+              <itemPath>../../../../amazon-freertos/libraries/freertos_plus/standard/utils/include/iot_system_init.h</itemPath>
             </logicalFolder>
             <logicalFolder name="src" displayName="src" projectFiles="true">
-              <itemPath>../../../../amazon-freertos/libraries/freertos_plus/standard/utils/src/aws_system_init.c</itemPath>
+              <itemPath>../../../../amazon-freertos/libraries/freertos_plus/standard/utils/src/iot_pki_utils.c</itemPath>
+              <itemPath>../../../../amazon-freertos/libraries/freertos_plus/standard/utils/src/iot_system_init.c</itemPath>
             </logicalFolder>
           </logicalFolder>
         </logicalFolder>
@@ -698,6 +661,38 @@
                 <itemPath>../../../../amazon-freertos/vendors/microchip/boards/curiosity_pic32mzef/ports/wifi/aws_wifi.c</itemPath>
                 <itemPath>../../../../amazon-freertos/vendors/microchip/boards/curiosity_pic32mzef/ports/wifi/aws_wifi_assert.c</itemPath>
               </logicalFolder>
+            </logicalFolder>
+          </logicalFolder>
+          <logicalFolder name="f2" displayName="smarthome_kit" projectFiles="true">
+            <logicalFolder name="f1" displayName="application_code" projectFiles="true">
+              <logicalFolder name="f1" displayName="microchip_code" projectFiles="true">
+                <itemPath>../smarthome_kit/application_code/microchip_code/NetworkConfig.h</itemPath>
+                <itemPath>../smarthome_kit/application_code/microchip_code/rtos_hooks.c</itemPath>
+                <itemPath>../smarthome_kit/application_code/microchip_code/system_config.h</itemPath>
+                <itemPath>../smarthome_kit/application_code/microchip_code/system_definitions.h</itemPath>
+                <itemPath>../smarthome_kit/application_code/microchip_code/system_exceptions.c</itemPath>
+                <itemPath>../smarthome_kit/application_code/microchip_code/system_init.c</itemPath>
+                <itemPath>../smarthome_kit/application_code/microchip_code/system_interrupt.c</itemPath>
+                <itemPath>../smarthome_kit/application_code/microchip_code/system_interrupt_a.S</itemPath>
+                <itemPath>../smarthome_kit/application_code/microchip_code/system_tasks.c</itemPath>
+              </logicalFolder>
+              <itemPath>../smarthome_kit/application_code/main.c</itemPath>
+            </logicalFolder>
+            <logicalFolder name="f2" displayName="config_files" projectFiles="true">
+              <itemPath>../smarthome_kit/config_files/FreeRTOSConfig.h</itemPath>
+              <itemPath>../smarthome_kit/config_files/FreeRTOSIPConfig.h</itemPath>
+              <itemPath>../smarthome_kit/config_files/aws_bufferpool_config.h</itemPath>
+              <itemPath>../smarthome_kit/config_files/aws_demo_config.h</itemPath>
+              <itemPath>../smarthome_kit/config_files/aws_ggd_config.h</itemPath>
+              <itemPath>../smarthome_kit/config_files/aws_iot_network_config.h</itemPath>
+              <itemPath>../smarthome_kit/config_files/aws_mqtt_agent_config.h</itemPath>
+              <itemPath>../smarthome_kit/config_files/aws_mqtt_config.h</itemPath>
+              <itemPath>../smarthome_kit/config_files/aws_ota_agent_config.h</itemPath>
+              <itemPath>../smarthome_kit/config_files/aws_pkcs11_config.h</itemPath>
+              <itemPath>../smarthome_kit/config_files/aws_secure_sockets_config.h</itemPath>
+              <itemPath>../smarthome_kit/config_files/aws_shadow_config.h</itemPath>
+              <itemPath>../smarthome_kit/config_files/aws_wifi_config.h</itemPath>
+              <itemPath>../smarthome_kit/config_files/iot_config.h</itemPath>
             </logicalFolder>
           </logicalFolder>
         </logicalFolder>
@@ -1983,8 +1978,54 @@
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
+    <Elem>../../../../lib/third_party/mcu_vendor/microchip</Elem>
+    <Elem>../../../../lib/FreeRTOS/portable/MPLAB</Elem>
+    <Elem>../../../../lib/secure_sockets</Elem>
+    <Elem>../../../../amazon-freertos/demos/common/include</Elem>
+    <Elem>../../../../lib/pkcs11/portable/microchip/curiosity_pic32mzef</Elem>
+    <Elem>../../../../lib/wifi/portable/microchip/curiosity_pic32mzef</Elem>
+    <Elem>../common/application_code</Elem>
+    <Elem>../common/config_files</Elem>
+    <Elem>../../../../lib/FreeRTOS-Plus-TCP</Elem>
+    <Elem>../../../../amazon-freertos/demos/common/demo_runner</Elem>
+    <Elem>../../../../amazon-freertos/demos/common/mqtt</Elem>
+    <Elem>../../../../amazon-freertos/demos/common/greengrass_connectivity</Elem>
+    <Elem>../../../../amazon-freertos/demos/common/logging</Elem>
+    <Elem>../../../../amazon-freertos/demos/common/ota</Elem>
+    <Elem>../../../../lib/pkcs11/mbedtls</Elem>
+    <Elem>../../../../amazon-freertos/demos/common/devmode_key_provisioning</Elem>
+    <Elem>../../../../amazon-freertos/demos/common/homeautomation</Elem>
+    <Elem>../../../../amazon-freertos/demos/common/home_automation</Elem>
+    <Elem>../../../mikroe</Elem>
+    <Elem>../../harmony</Elem>
     <Elem>../../../home_automation</Elem>
     <Elem>../../../../amazon-freertos/demos/network_manager</Elem>
+    <Elem>../../../../amazon-freertos/demos/demo_runner</Elem>
+    <Elem>../../../../amazon-freertos/demos/https</Elem>
+    <Elem>../../../../amazon-freertos/freertos_kernel/include</Elem>
+    <Elem>../../../../amazon-freertos/libraries/3rdparty/http_parser</Elem>
+    <Elem>../../../../amazon-freertos/libraries/3rdparty/mbedtls/utils</Elem>
+    <Elem>../../../../amazon-freertos/libraries/abstractions/pkcs11/include</Elem>
+    <Elem>../../../../amazon-freertos/libraries/abstractions/pkcs11/mbedtls</Elem>
+    <Elem>../../../../amazon-freertos/libraries/abstractions/platform/freertos</Elem>
+    <Elem>../../../../amazon-freertos/libraries/abstractions/secure_sockets/freertos_plus_tcp</Elem>
+    <Elem>../../../../amazon-freertos/libraries/abstractions/secure_sockets/include</Elem>
+    <Elem>../../../../amazon-freertos/libraries/abstractions/wifi/include</Elem>
+    <Elem>../../../../amazon-freertos/libraries/c_sdk/standard/common</Elem>
+    <Elem>../../../../amazon-freertos/libraries/c_sdk/standard/https/src</Elem>
+    <Elem>../../../../amazon-freertos/libraries/c_sdk/standard/mqtt/src</Elem>
+    <Elem>../../../../amazon-freertos/libraries/c_sdk/standard/serializer/src/json</Elem>
+    <Elem>../../../../amazon-freertos/libraries/freertos_plus/aws/ota/src</Elem>
+    <Elem>../../../../amazon-freertos/libraries/freertos_plus/standard/crypto/include</Elem>
+    <Elem>../../../../amazon-freertos/libraries/freertos_plus/standard/crypto/src</Elem>
+    <Elem>../../../../amazon-freertos/libraries/freertos_plus/standard/pkcs11/include</Elem>
+    <Elem>../../../../amazon-freertos/libraries/freertos_plus/standard/pkcs11/src</Elem>
+    <Elem>../../../../amazon-freertos/libraries/freertos_plus/standard/tls/include</Elem>
+    <Elem>../../../../amazon-freertos/libraries/freertos_plus/standard/tls/src</Elem>
+    <Elem>../../../../amazon-freertos/libraries/freertos_plus/standard/utils/include</Elem>
+    <Elem>../../../../amazon-freertos/libraries/freertos_plus/standard/utils/src</Elem>
+    <Elem>../smarthome_kit/application_code</Elem>
+    <Elem>../smarthome_kit/config_files</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
@@ -1997,7 +2038,7 @@
         <platformTool>snap</platformTool>
         <languageToolchain>XC32</languageToolchain>
         <languageToolchainVersion>2.10</languageToolchainVersion>
-        <platform>4</platform>
+        <platform>2</platform>
       </toolsSet>
       <packs>
         <pack name="PIC32MZ-EF_DFP" vendor="Microchip" version="1.0.20"/>
@@ -2051,7 +2092,7 @@
         <property key="enable-unroll-loops" value="false"/>
         <property key="exclude-floating-point" value="false"/>
         <property key="extra-include-directories"
-                  value="../../../../amazon-freertos/freertos_kernel/include;../../../../amazon-freertos/libraries/c_sdk/standard/common/include;../../../../amazon-freertos/libraries/freertos_plus/standard/crypto/include;../../../../amazon-freertos/libraries/freertos_plus/standard/tls/include;../../../../amazon-freertos/libraries/freertos_plus/standard/freertos_plus_tcp/source/portable/compiler/GCC;../../../../amazon-freertos/libraries/abstractions/wifi/include;../../../../amazon-freertos/libraries/abstractions/pkcs11/include;../common/application_code/microchip_code;../../../../amazon-freertos/freertos_kernel/portable/MPLAB/PIC32MZ;../../harmony/v2.05/framework;../../harmony/v2.05/bsp;../../../../amazon-freertos/demos/include;../../../../amazon-freertos/demos/network_manager;../common/config_files;../../../../amazon-freertos/libraries/c_sdk/standard/common/include/private;../../../../amazon-freertos/libraries/abstractions/platform/include;../../../../amazon-freertos/libraries/abstractions/platform/freertos/include;../../../../amazon-freertos/libraries/abstractions/secure_sockets/include;../../../../amazon-freertos/libraries/freertos_plus/standard/freertos_plus_tcp/include;../../../../amazon-freertos/libraries/freertos_plus/standard/freertos_plus_tcp/test;../../harmony/v2.05/framework/system/common;../../harmony/v2.05/framework/driver/wifi/wilc1000/include;../../harmony/v2.05/framework/driver/wifi/wilc1000/wireless_driver_extension;../../harmony/v2.05/framework/driver/wifi/wilc1000/wireless_driver_extension/common/include;../../harmony/v2.05/framework/driver/wifi/wilc1000/wireless_driver_extension/driver/include;../../harmony/v2.05/framework/driver/wifi/wilc1000/wireless_driver_extension/driver/source;../../harmony/v2.05/framework/driver/wifi/wilc1000/wireless_driver/include;../../../../amazon-freertos/demos/dev_mode_key_provisioning/include;../../../../amazon-freertos/libraries/freertos_plus/standard/utils/include;../../../../amazon-freertos/libraries/c_sdk/aws/defender/include;../../../../amazon-freertos/libraries/c_sdk/standard/mqtt/include;../../../../amazon-freertos/libraries/c_sdk/standard/serializer/include;../../../../amazon-freertos/libraries/c_sdk/aws/shadow/include;../../../../amazon-freertos/libraries/freertos_plus/aws/greengrass/include;../../../../amazon-freertos/libraries/freertos_plus/aws/ota/src;../../../../amazon-freertos/libraries/freertos_plus/aws/ota/include;../../../../amazon-freertos/libraries/3rdparty/mbedtls/include;../../../../amazon-freertos/libraries/abstractions/posix/include;../../../../amazon-freertos/vendors/microchip/boards/curiosity_pic32mzef/ports/posix;../../../../amazon-freertos/libraries/freertos_plus/standard/freertos_plus_posix/include;../../../../amazon-freertos/libraries/3rdparty/jsmn;../../../../amazon-freertos/libraries/3rdparty/pkcs11;../../../../amazon-freertos/libraries/3rdparty/tinycbor;../../../../amazon-freertos/libraries/3rdparty/tinycrypt/asn1;../../../../amazon-freertos/libraries/3rdparty/tinycrypt/lib/include;../../../../amazon-freertos/libraries/3rdparty/mbedtls/include/mbedtls;../../../../amazon-freertos/libraries/abstractions/pkcs11/mbedtls;../../../mikroe;../../../mikroe/OLED_C;../../../mikroe/Rotary;../../../mikroe/Weather;../../../home_automation;../../../home_automation/remote_hvac"/>
+                  value="../../../../amazon-freertos/freertos_kernel/include;../../../../amazon-freertos/libraries/c_sdk/standard/common/include;../../../../amazon-freertos/libraries/freertos_plus/standard/crypto/include;../../../../amazon-freertos/libraries/freertos_plus/standard/tls/include;../../../../amazon-freertos/libraries/freertos_plus/standard/freertos_plus_tcp/source/portable/compiler/GCC;../../../../amazon-freertos/libraries/abstractions/wifi/include;../../../../amazon-freertos/libraries/abstractions/pkcs11/include;../smarthome_kit/application_code/microchip_code;../../../../amazon-freertos/freertos_kernel/portable/MPLAB/PIC32MZ;../../harmony/v2.05/framework;../../harmony/v2.05/bsp;../../../../amazon-freertos/demos/include;../../../../amazon-freertos/demos/network_manager;../smarthome_kit/config_files;../../../../amazon-freertos/libraries/c_sdk/standard/common/include/private;../../../../amazon-freertos/libraries/abstractions/platform/include;../../../../amazon-freertos/libraries/abstractions/platform/freertos/include;../../../../amazon-freertos/libraries/abstractions/secure_sockets/include;../../../../amazon-freertos/libraries/freertos_plus/standard/freertos_plus_tcp/include;../../../../amazon-freertos/libraries/freertos_plus/standard/freertos_plus_tcp/test;../../harmony/v2.05/framework/system/common;../../harmony/v2.05/framework/driver/wifi/wilc1000/include;../../harmony/v2.05/framework/driver/wifi/wilc1000/wireless_driver_extension;../../harmony/v2.05/framework/driver/wifi/wilc1000/wireless_driver_extension/common/include;../../harmony/v2.05/framework/driver/wifi/wilc1000/wireless_driver_extension/driver/include;../../harmony/v2.05/framework/driver/wifi/wilc1000/wireless_driver_extension/driver/source;../../harmony/v2.05/framework/driver/wifi/wilc1000/wireless_driver/include;../../../../amazon-freertos/demos/dev_mode_key_provisioning/include;../../../../amazon-freertos/libraries/freertos_plus/standard/utils/include;../../../../amazon-freertos/libraries/c_sdk/aws/defender/include;../../../../amazon-freertos/libraries/c_sdk/standard/mqtt/include;../../../../amazon-freertos/libraries/c_sdk/standard/serializer/include;../../../../amazon-freertos/libraries/c_sdk/aws/shadow/include;../../../../amazon-freertos/libraries/freertos_plus/aws/greengrass/include;../../../../amazon-freertos/libraries/freertos_plus/aws/ota/src;../../../../amazon-freertos/libraries/freertos_plus/aws/ota/include;../../../../amazon-freertos/libraries/3rdparty/mbedtls/include;../../../../amazon-freertos/libraries/abstractions/posix/include;../../../../amazon-freertos/vendors/microchip/boards/curiosity_pic32mzef/ports/posix;../../../../amazon-freertos/libraries/freertos_plus/standard/freertos_plus_posix/include;../../../../amazon-freertos/libraries/3rdparty/jsmn;../../../../amazon-freertos/libraries/3rdparty/pkcs11;../../../../amazon-freertos/libraries/3rdparty/tinycbor;../../../../amazon-freertos/libraries/3rdparty/tinycrypt/asn1;../../../../amazon-freertos/libraries/3rdparty/tinycrypt/lib/include;../../../../amazon-freertos/libraries/3rdparty/mbedtls/include/mbedtls;../../../../amazon-freertos/libraries/abstractions/pkcs11/mbedtls;../../../mikroe;../../../mikroe/OLED_C;../../../mikroe/Rotary;../../../mikroe/Weather;../../../home_automation;../../../home_automation/remote_hvac"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -2094,6 +2135,9 @@
         <property key="preprocessor-macros" value=""/>
         <property key="warning-level" value=""/>
       </C32-AS>
+      <C32-CO>
+        <property key="coverage-enable" value=""/>
+      </C32-CO>
       <C32-LD>
         <property key="additional-options-use-response-files" value="false"/>
         <property key="additional-options-write-sla" value="false"/>
@@ -2697,7 +2741,8 @@
         <property key="TIMER9" value="true"/>
         <property key="ToolFirmwareFilePath"
                   value="Press to browse for a specific firmware version"/>
-        <property key="ToolFirmwareOption.UseLatestFirmware" value="true"/>
+        <property key="ToolFirmwareOption.UpdateOptions"
+                  value="ToolFirmwareOption.UseLatest"/>
         <property key="UART1" value="true"/>
         <property key="UART2" value="true"/>
         <property key="UART3" value="true"/>

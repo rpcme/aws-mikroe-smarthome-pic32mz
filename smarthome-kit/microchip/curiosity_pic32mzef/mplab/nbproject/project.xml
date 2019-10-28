@@ -16,8 +16,54 @@
                 <make-dep-project>../../curiosity_pic32_bl/aws_bootloader.X</make-dep-project>
             </make-dep-projects>
             <sourceRootList>
+                <sourceRootElem>../../../../lib/third_party/mcu_vendor/microchip</sourceRootElem>
+                <sourceRootElem>../../../../lib/FreeRTOS/portable/MPLAB</sourceRootElem>
+                <sourceRootElem>../../../../lib/secure_sockets</sourceRootElem>
+                <sourceRootElem>../../../../amazon-freertos/demos/common/include</sourceRootElem>
+                <sourceRootElem>../../../../lib/pkcs11/portable/microchip/curiosity_pic32mzef</sourceRootElem>
+                <sourceRootElem>../../../../lib/wifi/portable/microchip/curiosity_pic32mzef</sourceRootElem>
+                <sourceRootElem>../common/application_code</sourceRootElem>
+                <sourceRootElem>../common/config_files</sourceRootElem>
+                <sourceRootElem>../../../../lib/FreeRTOS-Plus-TCP</sourceRootElem>
+                <sourceRootElem>../../../../amazon-freertos/demos/common/demo_runner</sourceRootElem>
+                <sourceRootElem>../../../../amazon-freertos/demos/common/mqtt</sourceRootElem>
+                <sourceRootElem>../../../../amazon-freertos/demos/common/greengrass_connectivity</sourceRootElem>
+                <sourceRootElem>../../../../amazon-freertos/demos/common/logging</sourceRootElem>
+                <sourceRootElem>../../../../amazon-freertos/demos/common/ota</sourceRootElem>
+                <sourceRootElem>../../../../lib/pkcs11/mbedtls</sourceRootElem>
+                <sourceRootElem>../../../../amazon-freertos/demos/common/devmode_key_provisioning</sourceRootElem>
+                <sourceRootElem>../../../../amazon-freertos/demos/common/homeautomation</sourceRootElem>
+                <sourceRootElem>../../../../amazon-freertos/demos/common/home_automation</sourceRootElem>
+                <sourceRootElem>../../../mikroe</sourceRootElem>
+                <sourceRootElem>../../harmony</sourceRootElem>
                 <sourceRootElem>../../../home_automation</sourceRootElem>
                 <sourceRootElem>../../../../amazon-freertos/demos/network_manager</sourceRootElem>
+                <sourceRootElem>../../../../amazon-freertos/demos/demo_runner</sourceRootElem>
+                <sourceRootElem>../../../../amazon-freertos/demos/https</sourceRootElem>
+                <sourceRootElem>../../../../amazon-freertos/freertos_kernel/include</sourceRootElem>
+                <sourceRootElem>../../../../amazon-freertos/libraries/3rdparty/http_parser</sourceRootElem>
+                <sourceRootElem>../../../../amazon-freertos/libraries/3rdparty/mbedtls/utils</sourceRootElem>
+                <sourceRootElem>../../../../amazon-freertos/libraries/abstractions/pkcs11/include</sourceRootElem>
+                <sourceRootElem>../../../../amazon-freertos/libraries/abstractions/pkcs11/mbedtls</sourceRootElem>
+                <sourceRootElem>../../../../amazon-freertos/libraries/abstractions/platform/freertos</sourceRootElem>
+                <sourceRootElem>../../../../amazon-freertos/libraries/abstractions/secure_sockets/freertos_plus_tcp</sourceRootElem>
+                <sourceRootElem>../../../../amazon-freertos/libraries/abstractions/secure_sockets/include</sourceRootElem>
+                <sourceRootElem>../../../../amazon-freertos/libraries/abstractions/wifi/include</sourceRootElem>
+                <sourceRootElem>../../../../amazon-freertos/libraries/c_sdk/standard/common</sourceRootElem>
+                <sourceRootElem>../../../../amazon-freertos/libraries/c_sdk/standard/https/src</sourceRootElem>
+                <sourceRootElem>../../../../amazon-freertos/libraries/c_sdk/standard/mqtt/src</sourceRootElem>
+                <sourceRootElem>../../../../amazon-freertos/libraries/c_sdk/standard/serializer/src/json</sourceRootElem>
+                <sourceRootElem>../../../../amazon-freertos/libraries/freertos_plus/aws/ota/src</sourceRootElem>
+                <sourceRootElem>../../../../amazon-freertos/libraries/freertos_plus/standard/crypto/include</sourceRootElem>
+                <sourceRootElem>../../../../amazon-freertos/libraries/freertos_plus/standard/crypto/src</sourceRootElem>
+                <sourceRootElem>../../../../amazon-freertos/libraries/freertos_plus/standard/pkcs11/include</sourceRootElem>
+                <sourceRootElem>../../../../amazon-freertos/libraries/freertos_plus/standard/pkcs11/src</sourceRootElem>
+                <sourceRootElem>../../../../amazon-freertos/libraries/freertos_plus/standard/tls/include</sourceRootElem>
+                <sourceRootElem>../../../../amazon-freertos/libraries/freertos_plus/standard/tls/src</sourceRootElem>
+                <sourceRootElem>../../../../amazon-freertos/libraries/freertos_plus/standard/utils/include</sourceRootElem>
+                <sourceRootElem>../../../../amazon-freertos/libraries/freertos_plus/standard/utils/src</sourceRootElem>
+                <sourceRootElem>../smarthome_kit/application_code</sourceRootElem>
+                <sourceRootElem>../smarthome_kit/config_files</sourceRootElem>
             </sourceRootList>
             <confList>
                 <confElem>
