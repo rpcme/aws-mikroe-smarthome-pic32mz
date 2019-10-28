@@ -60,7 +60,7 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 #include "bsp.h"
 
 #ifndef PIC32_USE_ETHERNET
-    #include "aws_wifi.h"
+    #include "iot_wifi.h"
     #include "aws_clientcredential.h"
 #endif
 

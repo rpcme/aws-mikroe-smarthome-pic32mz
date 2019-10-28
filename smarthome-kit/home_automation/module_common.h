@@ -43,7 +43,7 @@
 #include "semphr.h"
 #include "queue.h"
 
-#include "aws_logging_task.h"
+#include "iot_logging_task.h"
 
 /* ------------------------------------------------------------------- MACROS */
 
