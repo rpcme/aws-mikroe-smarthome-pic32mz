@@ -46,7 +46,7 @@
 
 /* Application version info. */
 #include "aws_application_version.h"
-#include "../../../../home_automation/aws_home_automation_demo.h"
+#include "aws_home_automation_demo.h"
 
 /* Declare the firmware version structure for all to see. */
 const AppVersion32_t xAppFirmwareVersion =

@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configurationDescriptor version="65">
   <logicalFolder name="root" displayName="root" projectFiles="true">
+    <logicalFolder name="f1" displayName="app" projectFiles="true">
+    </logicalFolder>
     <logicalFolder name="demos" displayName="demos" projectFiles="true">
       <logicalFolder name="defender" displayName="defender" projectFiles="true">
         <itemPath>../../../../amazon-freertos/demos/defender/aws_iot_demo_defender.c</itemPath>
@@ -1974,6 +1976,8 @@
         <itemPath>../../../home_automation/remote_hvac/module_sensor.c</itemPath>
         <itemPath>../../../home_automation/remote_hvac/module_thermostat.c</itemPath>
         <itemPath>../../../home_automation/module_common.h</itemPath>
+        <itemPath>../../../home_automation/aws_home_automation_demo.h</itemPath>
+        <itemPath>../../../home_automation/remote_hvac/aws_remote_hvac.c</itemPath>
       </logicalFolder>
     </logicalFolder>
   </logicalFolder>

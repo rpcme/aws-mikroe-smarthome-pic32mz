@@ -23,10 +23,10 @@
  * http://www.FreeRTOS.org
  */
 
-#ifndef _AWS_CLICKBOARD_H_
-#define _AWS_CLICKBOARD_H_
+#ifndef _AWS_HOME_AUTOMATION_DEMO_H_
+#define _AWS_HOME_AUTOMATION_DEMO_H_
 
-#define AWS_WORKSHOP 1
+#define AWS_WORKSHOP 0
 
 #if AWS_WORKSHOP == 1
 #define AWS_WORKSHOP_SECTION_2_CONN_1    1
@@ -39,7 +39,7 @@
 #define AWS_WORKSHOP_SECTION_2_CONN_2    1
 #define AWS_WORKSHOP_SECTION_3_TELEMETRY 1
 #define AWS_WORKSHOP_SECTION_4_SHADOW    1
-#define AWS_WORKSHOP_SECTION_5_OTA       1
+#define AWS_WORKSHOP_SECTION_5_OTA       0
 #endif
 
 #include "aws_demo.h"

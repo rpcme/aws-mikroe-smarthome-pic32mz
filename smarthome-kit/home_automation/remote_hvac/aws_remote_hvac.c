@@ -20,7 +20,7 @@
 #include "message_buffer.h"
 
 /* MQTT includes. */
-#include "aws_mqtt_agent.h"
+#include "iot_mqtt_agent.h"
 #include "jsmn.h"
 
 /* Credentials includes. */
@@ -33,7 +33,9 @@
 #include "../module_common.h"
 #include "module_sensor.h"
 #include "module_display.h"
-#include "aws_ota_agent.h"
+#include "module_thermostat.h"
+
+#include "aws_iot_ota_agent.h"
 
 #include "aws_application_version.h"
 
